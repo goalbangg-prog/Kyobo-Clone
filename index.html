@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교보문고 클론 포트폴리오</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="header">
+
+    <div class="top-promo">
+      <a href="#" class="top-promo-link">
+        <span class="top-copy-small">쌓을수록 빛나는 지식&문화 혜택</span>
+        <strong class="top-copy-main">교보문고 기프트카드 STACK REWARD</strong>
+        <img src="img/top-gift.png" alt="">
+      </a>
+    </div>
+
+    <div class="header-service-tabs">
+      <div class="container service-tabs-inner">
+        <ul class="service-tabs">
+          <li class="active"><a href="#">교보문고</a></li>
+          <li><a href="#">eBook</a></li>
+          <li><a href="#">sam</a></li>
+          <li><a href="#">핫트랙스</a></li>
+          <li><a href="#">바로출판</a></li>
+        </ul>
+
+        <ul class="service-links">
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원혜택</a></li>
+          <li><a href="#">주문배송</a></li>
+          <li><a href="#">마이페이지</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main-inner">
+
+        <a class="logo" href="index.html">
+          <img src="img/logo/logo.svg" alt="교보문고">
+        </a>
+
+        <div class="search-area">
+
+          <form class="search-box" id="searchForm">
+            <select id="searchTarget" aria-label="검색 범위">
+              <option value="">통합검색</option>
+              <option value="title">제목</option>
+              <option value="person">저자</option>
+              <option value="publisher">출판사</option>
+            </select>
+
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="우리 아들에게 꼭 그래야만 했나!"
+              autocomplete="off"
+            >
+
+            <button type="submit" class="search-button" aria-label="검색">
+              ⌕
+            </button>
+          </form>
+
+          <div
+            class="search-preview"
+            id="searchPreview"
+            hidden
+          >
+
+            <div class="search-preview-main">
+
+              <section class="search-result-list">
+                <h3>도서</h3>
+
+                <div
+                  class="search-book-list"
+                  id="searchBookList"
+                ></div>
+
+                <div class="search-pagination search-book-pagination">
+                  <button type="button" id="searchBooksPrev" aria-label="이전 도서">‹</button>
+                  <span id="searchBooksPage">01 - 03</span>
+                  <button type="button" id="searchBooksNext" aria-label="다음 도서">›</button>
+                </div>
+              </section>
+
+
+              <section
+                class="search-book-detail"
+                id="searchBookDetail"
+              >
+              </section>
+
+            </div>
+
+
+            <div class="search-preview-bottom">
+
+              <section class="search-related-box">
+                <h3>인물</h3>
+                <div id="searchPeople">
+                  관련 인물을 찾고 있습니다.
+                </div>
+              </section>
+
+              <section class="search-related-box search-event-box">
+                <div class="search-related-heading">
+                  <h3>이벤트</h3>
+
+                  <div class="search-pagination">
+                    <button type="button" id="searchEventsPrev" aria-label="이전 이벤트">‹</button>
+                    <span id="searchEventsPage">01 - 02</span>
+                    <button type="button" id="searchEventsNext" aria-label="다음 이벤트">›</button>
+                  </div>
+                </div>
+
+                <div class="search-event-list" id="searchEvents"></div>
+              </section>
+
+            </div>
+
+
+            <div class="search-preview-footer">
+              <span>도움말</span>
+
+              <button
+                type="button"
+                id="closeSearchPreview"
+              >
+                닫기
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="header-icons">
+          <button
+            type="button"
+            class="header-icon-button cart-header-button"
+            aria-label="장바구니"
+          >
+            <img src="img/icon/cart.png" alt="">
+            <span class="cart-count-badge" id="mainCartBadge" hidden>0</span>
+          </button>
+
+          <button
+            type="button"
+            class="header-icon-button my-button"
+            aria-label="마이페이지"
+          >
+            <img src="img/icon/user.png" alt="">
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="gnb">
+      <div class="container gnb-inner">
+
+        <button class="menu-button" type="button" aria-label="전체메뉴">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="gnb-menu">
+          <li class="active"><a href="#">김초엽X펩톤</a></li>
+          <li><a href="#">오디세이</a></li>
+          <li><a href="#best">베스트</a></li>
+          <li><a href="#event">이벤트</a></li>
+          <li><a href="#">주말특가</a></li>
+          <li><a href="#">바로펀딩</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#aiPicks">PICKS</a></li>
+          <li><a href="#">컬처라운지</a></li>
+        </ul>
+
+        <ul class="gnb-right">
+          <li><a href="#">오늘의 미션</a></li>
+          <li><a href="#">할인혜택</a></li>
+          <li><a href="#">최후의 1인은?</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <section class="hero-section">
+
+      <div class="container hero-stage">
+
+        <!-- 메인 배너 -->
+        <div class="hero-slider" id="heroSlider">
+          <a class="hero-slide-link" href="#">
+            <img
+              id="heroImage"
+              src="img/banner/banner1.jpg"
+              alt="교보문고 메인 프로모션"
+            >
+          </a>
+
+          <div class="hero-controls">
+            <button type="button" id="heroPause" aria-label="자동재생 일시정지">Ⅱ</button>
+            <button type="button" id="heroPrev" aria-label="이전 배너">‹</button>
+            <span id="heroPage">1 / 5</span>
+            <button type="button" id="heroNext" aria-label="다음 배너">›</button>
+          </div>
+        </div>
+
+
+        <!-- 우측 프로모션 -->
+        <aside class="side-promo">
+
+          <a href="#" class="side-promo-link">
+
+            <img
+              id="sidePromoImage"
+              src="img/banner/right banner1.jpg"
+              alt="오늘만 특가"
+            >
+
+            <div class="side-promo-copy">
+
+              <span id="sidePromoLabel">
+                바로펀딩
+              </span>
+
+              <strong id="sidePromoTitle">
+                일본 아마존 분야 1위!<br>
+                초고속 주식 투자법
+              </strong>
+
+            </div>
+
+          </a>
+
+          <div
+            class="side-promo-dots"
+            id="sidePromoDots"
+          ></div>
+
+        </aside>
+
+
+        <!-- 메인 배너 바로 아래 퀵메뉴 -->
+        <div class="quick-menu">
+
+          <a href="#">
+            <span><img src="img/icon/menu1.png" alt=""></span>
+            혜택·이벤트
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu2.svg" alt=""></span>
+            오늘만특가
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu3.svg" alt=""></span>
+            APP혜택
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu4.svg" alt=""></span>
+            기프트카드
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu5.svg" alt=""></span>
+            바로출판
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu6.svg" alt=""></span>
+            이달의 책
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu7.svg" alt=""></span>
+            손글씨대회
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu8.svg" alt=""></span>
+            오늘의굿즈
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu9.svg" alt=""></span>
+            트렌드+
+          </a>
+
+          <a href="#">
+            <span><img src="img/icon/menu10.svg" alt=""></span>
+            인물&작품
+          </a>
+
+        </div>
+
+
+        <!-- 우측 배너 바로 아래 미션 -->
+        <a href="#" class="mission-banner">
+          <img
+            src="img/mission.jpg"
+            alt="미션 수행하고 선착순 교환권 받기"
+          >
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         오늘의 선택
+    ========================== -->
+    <section class="book-section today-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="title-with-tabs">
+            <h2>오늘의 선택</h2>
+            <div class="tabs" id="todayTabs">
+              <button class="active" type="button" data-today-key="domestic">국내도서</button>
+              <button type="button" data-today-key="foreign">외국도서</button>
+              <button type="button" data-today-key="ebook">eBook</button>
+              <button type="button" data-today-key="sam">sam</button>
+              <button type="button" data-today-key="hottracks">핫트랙스</button>
+            </div>
+          </div>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="today-layout">
+          <button class="circle-arrow" id="todayPrev" type="button" aria-label="이전">‹</button>
+
+          <div class="today-featured" id="todayFeatured">
+            <div class="featured-cover skeleton-cover"></div>
+            <div class="featured-info">
+              <h3>도서 정보를 불러오는 중입니다.</h3>
+              <strong>카카오 도서 API 연결 후 표시됩니다.</strong>
+              <p>대표 도서의 설명이 이 영역에 표시됩니다.</p>
+            </div>
+          </div>
+
+          <div class="today-thumbs" id="todayThumbs"></div>
+
+          <button class="circle-arrow" id="todayNext" type="button" aria-label="다음">›</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         공통 도서 섹션
+    ========================== -->
+
+    <section class="book-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="title-with-tabs">
+            <h2>MD들이 신중하게 골랐어요</h2>
+            <div class="tabs" id="mdTabs">
+              <button class="active" type="button" data-md-key="domestic">국내도서</button>
+              <button type="button" data-md-key="foreign">외국도서</button>
+              <button type="button" data-md-key="ebook">eBook</button>
+              <button type="button" data-md-key="sam">sam</button>
+              <button type="button" data-md-key="hottracks">핫트랙스</button>
+            </div>
+          </div>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" id="mdPrev" type="button" aria-label="MD 추천 이전">‹</button>
+          <div class="book-grid" id="mdBooks"></div>
+          <button class="circle-arrow row-next" id="mdNext" type="button" aria-label="MD 추천 다음">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>출판사에서 자신있게 추천해요</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" type="button" aria-label="이전">‹</button>
+          <div class="book-grid" id="publisherBooks"></div>
+          <button class="circle-arrow row-next" type="button" aria-label="다음">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>트렌드+가 지금 읽을 책을 골랐어요</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" type="button" aria-label="이전">‹</button>
+          <div class="book-grid" id="trendBooks"></div>
+          <button class="circle-arrow row-next" type="button" aria-label="다음">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>북 퍼포먼스 예능 읽는 사람들</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" type="button" aria-label="이전">‹</button>
+          <div class="book-grid" id="performanceBooks"></div>
+          <button class="circle-arrow row-next" type="button" aria-label="다음">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>사람들이 많이 찾고 있어요</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" type="button" aria-label="이전">‹</button>
+          <div class="book-grid" id="popularBooks"></div>
+          <button class="circle-arrow row-next" type="button" aria-label="다음">›</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         AI PICKS
+    ========================== -->
+    <section class="book-section ai-picks" id="aiPicks">
+      <div class="container ai-picks-grid">
+
+        <div class="ai-picks-copy">
+          <span>AI 추천</span>
+          <h2>Picks</h2>
+          <p>
+            관심의 기쁨을 선물합니다.<br>
+            취향을 분석해 꼭 맞는 책을<br>
+            추천해 드릴게요!
+          </p>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="ai-book-grid" id="aiBooks"></div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         BEST
+    ========================== -->
+    <section class="best-section" id="best">
+      <div class="container best-layout">
+
+        <aside class="best-side">
+          <h2>베스트</h2>
+          <a href="#" class="more-link">더보기 +</a>
+
+          <ul>
+            <li class="active">전체</li>
+            <li>국내도서</li>
+            <li>외국도서</li>
+            <li>eBook</li>
+            <li>sam</li>
+            <li>교보only</li>
+          </ul>
+        </aside>
+
+        <div class="best-grid" id="bestBooks"></div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         바로출판 POD
+    ========================== -->
+    <section class="book-section pod-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>바로출판POD</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" type="button" aria-label="이전">‹</button>
+          <div class="book-grid" id="podBooks"></div>
+          <button class="circle-arrow row-next" type="button" aria-label="다음">›</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         교보문고 Only
+    ========================== -->
+    <section class="book-section only-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>교보문고에서만 만날 수 있어요</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="book-row-wrap">
+          <button class="circle-arrow row-prev" type="button" aria-label="이전">‹</button>
+          <div class="book-grid" id="onlyBooks"></div>
+          <button class="circle-arrow row-next" type="button" aria-label="다음">›</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- =========================
+         CASTing
+    ========================== -->
+    <section class="book-section casting-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>CASTing</h2>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="casting-grid">
+          <article class="casting-card"><img src="img/casting1.jpg" alt="CASTing 콘텐츠"><h3>책과 함께하는 사람들의 이야기</h3></article>
+          <article class="casting-card"><img src="img/casting2.jpg" alt="CASTing 콘텐츠"><h3>작가가 들려주는 책 이야기</h3></article>
+          <article class="casting-card"><img src="img/casting3.jpg" alt="CASTing 콘텐츠"><h3>오늘의 책, 오늘의 사람</h3></article>
+          <article class="casting-card"><img src="img/casting4.jpg" alt="CASTing 콘텐츠"><h3>깊이 읽는 인문·교양 이야기</h3></article>
+          <article class="casting-card"><img src="img/casting5.jpg" alt="CASTing 콘텐츠"><h3>그림으로 만나는 새로운 시선</h3></article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         EVENT
+    ========================== -->
+    <section class="book-section event-section" id="event">
+      <div class="container">
+        <div class="section-heading">
+          <div class="title-with-tabs">
+            <h2>이벤트의 정성이 달라요</h2>
+            <div class="tabs">
+              <button class="active">교보문고</button>
+              <button>eBook</button>
+              <button>핫트랙스</button>
+            </div>
+          </div>
+          <a href="#" class="more-link">더보기 +</a>
+        </div>
+
+        <div class="event-grid">
+          <a href="#" class="event-card"><img src="img/event1.jpg" alt="2026년 교보문고 인문교양대상"></a>
+          <a href="#" class="event-card"><img src="img/event2.jpg" alt="읽을 책 고를 땐 트렌드+"></a>
+          <a href="#" class="event-card"><img src="img/event3.jpg" alt="수상 기념 책향 프로모션"></a>
+          <a href="#" class="event-card"><img src="img/event4.jpg" alt="요리 안 하는 요리책"></a>
+          <a href="#" class="event-card"><img src="img/event5.jpg" alt="여름방학 신학기 리딩 가이드"></a>
+          <a href="#" class="event-card"><img src="img/event6.jpg" alt="길벗어린이 문학 동화의 세계"></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <div class="notice-bar">
+      <div class="container notice-inner">
+        <strong>공지사항</strong>
+        <span>회원등급 산정 순수구매액 적용 기준 변경 안내</span>
+        <strong>당첨자발표</strong>
+        <span>신간 알림 신청 이벤트 당첨자 발표</span>
+      </div>
+    </div>
+
+    <div class="container footer-main">
+      <div class="footer-left">
+        <img class="footer-kyobo-logo" src="img/logo/logo.svg" alt="KYOBO 교보문고">
+
+        <ul class="footer-links">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">대량구매서비스</a></li>
+          <li><a href="#">협력사여러분</a></li>
+          <li><a href="#">채용정보</a></li>
+          <li><a href="#">광고소개</a></li>
+        </ul>
+
+        <div class="company-info">
+          <p>(주)교보문고 &nbsp; 서울특별시 종로구 종로 1 &nbsp; 대표이사 : 허정도</p>
+          <p>사업자등록번호 : 102-81-11670 &nbsp; <a href="#">사업자정보확인</a></p>
+          <p>대표전화(발신자부담) : 1544-1900(교보문고) · 1661-1112(핫트랙스)</p>
+          <p>FAX : 0502-987-5711(지역번호 공통) &nbsp; 서울특별시 통신판매업신고번호 : 제 653호</p>
+          <p>© KYOBO BOOK CENTRE</p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-selects">
+          <select aria-label="패밀리 사이트"><option>Family Site</option></select>
+          <select aria-label="SNS 바로가기"><option>SNS 바로가기</option></select>
+        </div>
+        <div class="footer-safety">
+          <strong>토스페이먼츠 구매안전서비스</strong>
+          <span>현금 결제 시 구매안전서비스를 이용할 수 있습니다.</span>
+        </div>
+
+        <div class="certification-row">
+          <div class="certification-item kcsi">
+            <img src="img/logo/KSCI.svg" alt="KCSI 인증">
+          </div>
+
+          <div class="certification-item isms">
+            <img src="img/logo/ISMS.png" alt="ISMS 인증">
+            <span>
+              정보보호관리체계 ISMS 인증획득<br>
+              <small>인증범위 : 인터넷 교보문고 및 브랜드 서비스 운영</small><br>
+              <small>유효기간 : 2023.11.15 ~ 2026.11.14</small>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

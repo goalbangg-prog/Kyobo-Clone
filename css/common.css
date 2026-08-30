@@ -1,0 +1,1939 @@
+@charset "utf-8";
+
+:root {
+  --kyobo-green: #4dac27;
+  --kyobo-blue: #273a78;
+  --text: #111;
+  --muted: #767676;
+  --line: #e8e8e8;
+  --soft: #f7f7f7;
+}
+
+.container {
+  width: 1200px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.header {
+  background: #fff;
+  position: relative;
+  z-index: 20;
+}
+
+.top-promo {
+  background: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+
+.top-promo-inner {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  font-size: 12px;
+  color: #666;
+}
+
+.top-promo-inner > p {
+  color: #4a4a8e;
+  font-weight: 700;
+}
+
+.top-links {
+  display: flex;
+  gap: 16px;
+}
+
+.header-main {
+  border-bottom: 1px solid #eee;
+}
+
+.header-main-inner {
+  height: 96px;
+  display: grid;
+  grid-template-columns: auto auto minmax(380px, 560px) 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-button span {
+  width: 16px;
+  height: 2px;
+  background: #222;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  color: var(--kyobo-blue);
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.logo-mark {
+  color: var(--kyobo-green);
+  font-size: 18px;
+}
+
+.logo strong {
+  letter-spacing: 2px;
+}
+
+.logo > span:last-child {
+  font-size: 14px;
+}
+
+.search-box {
+  height: 48px;
+  border: 1px solid #d9d9d9;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.search-box select {
+  width: 100px;
+  height: 100%;
+  border: 0;
+  padding-left: 18px;
+  outline: none;
+  background: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 0 14px;
+  color: #333;
+}
+
+.search-button {
+  width: 50px;
+  height: 100%;
+  font-size: 24px;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header-icons button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 21px;
+}
+
+.my-button {
+  background: var(--kyobo-green);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(77, 172, 39, .25);
+}
+
+.gnb {
+  border-bottom: 1px solid #eee;
+}
+
+.gnb ul {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.gnb li.active,
+.gnb li:nth-child(2),
+.gnb li:nth-child(5) {
+  color: #2e9624;
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+  margin-top: 80px;
+}
+
+.notice-bar {
+  border-bottom: 1px solid #eee;
+}
+
+.notice-inner {
+  height: 58px;
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  font-size: 12px;
+}
+
+.notice-inner strong {
+  color: #111;
+}
+
+.notice-inner span {
+  color: #666;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+.footer-main {
+  padding: 45px 0 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 22px;
+  font-size: 12px;
+  color: #555;
+}
+
+.company {
+  font-size: 11px;
+  color: #999;
+}
+
+.footer-selects {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-selects select {
+  width: 190px;
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: calc(100% - 32px);
+  }
+
+  .top-promo {
+    display: none;
+  }
+
+  .header-main-inner {
+    grid-template-columns: auto auto 1fr auto;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+
+  .gnb {
+    overflow-x: auto;
+  }
+
+  .gnb ul {
+    width: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-main-inner {
+    height: auto;
+    min-height: 80px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "menu logo icons"
+      "search search search";
+    padding: 12px 0;
+  }
+
+  .menu-button { grid-area: menu; }
+  .logo { grid-area: logo; }
+  .search-box { grid-area: search; width: 100%; }
+  .header-icons { grid-area: icons; }
+
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-selects {
+    flex-direction: column;
+  }
+
+  .notice-inner {
+    grid-template-columns: auto 1fr;
+    height: auto;
+    padding: 16px 0;
+  }
+}
+
+
+/* ============================================
+   v4 - 실제 교보문고 헤더 비율 보정
+============================================ */
+
+.top-promo {
+  height: 56px;
+}
+
+.top-promo > img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-service-tabs {
+  height: 38px;
+  border-bottom: 1px solid #ececec;
+  background: #fff;
+}
+
+.service-tabs-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-tabs {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.service-tabs li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  height: 100%;
+  padding: 0 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.service-tabs li:nth-child(1) a { background: #5361c6; }
+.service-tabs li:nth-child(2) a { background: #3f65cf; }
+.service-tabs li:nth-child(3) a { background: #24a7a2; }
+.service-tabs li:nth-child(4) a { background: #f24f43; }
+.service-tabs li:nth-child(5) a {
+  color: #666;
+  background: #fff;
+  border-right: 1px solid #eee;
+}
+
+.service-tabs li:first-child a {
+  border-radius: 0 0 0 18px;
+}
+
+.service-links {
+  display: flex;
+  gap: 12px;
+  font-size: 10px;
+  color: #777;
+}
+
+.header-main {
+  border-bottom: 0;
+}
+
+.header-main-inner {
+  height: 84px;
+  grid-template-columns: 180px minmax(420px, 560px) 1fr;
+  gap: 24px;
+}
+
+.logo img {
+  width: 165px;
+}
+
+.search-box {
+  height: 42px;
+}
+
+.header-icons button {
+  width: 42px;
+  height: 42px;
+}
+
+.gnb {
+  border-top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.gnb-inner {
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-button {
+  display: flex;
+  width: 38px;
+  height: 38px;
+}
+
+.gnb-menu {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  height: 58px;
+}
+
+.gnb-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 11px;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .header-service-tabs {
+    display: none;
+  }
+
+  .gnb-right {
+    display: none;
+  }
+
+  .gnb-inner {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .header-main-inner {
+    grid-template-columns: 150px 1fr auto;
+  }
+}
+
+
+/* ============================================
+   v5 - 교보문고 첫 화면 정밀 보정
+============================================ */
+
+:root {
+  --kyobo-green: #3aa72f;
+  --kyobo-blue: #142b67;
+  --kyobo-text: #292929;
+  --kyobo-muted: #767676;
+  --kyobo-line: #eeeeee;
+}
+
+/*
+  실제 화면은 21:9 전체 폭을 사용하는 것이 아니라
+  약 980px 중심 콘텐츠를 사용한다.
+*/
+.container {
+  width: 980px;
+  max-width: calc(100% - 40px);
+}
+
+/* 탑 프로모션: 원본 1200px 이미지를 강제 확대하지 않음 */
+.top-promo {
+  height: 55px;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+.top-promo > img {
+  width: 1200px;
+  max-width: none;
+  height: 55px;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* 서비스 탭 */
+.header-service-tabs {
+  height: 34px;
+  border-bottom: 1px solid #ededed;
+}
+
+.service-tabs-inner {
+  position: relative;
+}
+
+.service-tabs {
+  height: 34px;
+}
+
+.service-tabs li a {
+  min-width: 60px;
+  height: 22px;
+  margin-top: 0;
+  padding: 0 16px;
+  font-size: 10px;
+  line-height: 22px;
+}
+
+.service-tabs li:nth-child(1) a {
+  background: #535ec7;
+  border-radius: 0 0 0 14px;
+}
+
+.service-tabs li:nth-child(2) a {
+  background: #3b5dc9;
+}
+
+.service-tabs li:nth-child(3) a {
+  background: #25a7a2;
+}
+
+.service-tabs li:nth-child(4) a {
+  background: #f04f45;
+}
+
+.service-tabs li:nth-child(5) a {
+  color: #555;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  border-radius: 0 0 14px 0;
+}
+
+.service-links {
+  align-self: flex-start;
+  margin-top: 8px;
+  gap: 10px;
+  font-size: 9px;
+  color: #777;
+}
+
+/* 로고 + 검색 */
+.header-main-inner {
+  height: 74px;
+  grid-template-columns: 145px 455px 1fr;
+  gap: 20px;
+}
+
+.logo img {
+  width: 145px;
+}
+
+.search-box {
+  width: 455px;
+  height: 40px;
+  border-color: #d8d8d8;
+  border-radius: 22px;
+}
+
+.search-box select {
+  width: 92px;
+  padding-left: 16px;
+  font-size: 11px;
+  color: #222;
+}
+
+.search-box input {
+  font-size: 11px;
+  color: #777;
+}
+
+.search-button {
+  width: 44px;
+  font-size: 20px;
+}
+
+.header-icons {
+  gap: 14px;
+}
+
+.header-icons button {
+  width: 39px;
+  height: 39px;
+  font-size: 18px;
+}
+
+.my-button {
+  background: #4ac62f;
+}
+
+/* GNB */
+.gnb-inner {
+  min-height: 55px;
+  grid-template-columns: 38px 1fr auto;
+  gap: 18px;
+}
+
+.menu-button {
+  width: 36px;
+  height: 36px;
+}
+
+.gnb-menu {
+  height: 55px;
+  gap: 24px;
+}
+
+.gnb-menu a {
+  font-size: 12px;
+  color: #222;
+  font-weight: 700;
+}
+
+.gnb-menu li.active a,
+.gnb-menu li:nth-child(2) a,
+.gnb-menu li:nth-child(5) a {
+  color: #259b2a;
+}
+
+.gnb-right {
+  gap: 18px;
+  font-size: 10px;
+  color: #777;
+}
+
+.gnb-right li:nth-child(2) a {
+  color: #319d2b;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: calc(100% - 32px);
+  }
+
+  .top-promo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* ============================================
+   v6 - 1200px 실제 사이트 스케일 기준
+============================================ */
+
+/*
+  교보문고 데스크톱 레이아웃은 1200px급 고정 콘텐츠 영역을 사용한다.
+  21:9 화면에서는 좌우 공간이 많이 남는 것이 정상이다.
+*/
+.container {
+  width: 1200px;
+  max-width: calc(100% - 40px);
+}
+
+/* --------------------------------------------
+   TOP PROMOTION
+   전체 jpg를 확대하지 않고 텍스트를 HTML로 재구성.
+   브라우저 확대/축소에서도 글자가 선명하게 유지된다.
+-------------------------------------------- */
+
+.top-promo {
+  width: 100%;
+  height: 70px;
+  background: #f3f3f3;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+.top-promo-link {
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  color: #676767;
+  white-space: nowrap;
+}
+
+.top-copy-small {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.top-copy-main {
+  color: #5151a0;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.top-promo-link img {
+  width: 100px;
+  height: 70px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+/* --------------------------------------------
+   서비스 탭
+-------------------------------------------- */
+
+.header-service-tabs {
+  height: 42px;
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.service-tabs-inner {
+  height: 42px;
+}
+
+.service-tabs {
+  height: 42px;
+  align-items: flex-start;
+}
+
+.service-tabs li a {
+  min-width: 74px;
+  height: 28px;
+  margin: 0;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.service-tabs li:nth-child(1) a {
+  background: #515ec8;
+  border-radius: 0 0 0 18px;
+}
+
+.service-tabs li:nth-child(2) a {
+  background: #4160ce;
+}
+
+.service-tabs li:nth-child(3) a {
+  background: #22aaa4;
+}
+
+.service-tabs li:nth-child(4) a {
+  background: #f14f43;
+}
+
+.service-tabs li:nth-child(5) a {
+  color: #6d6d6d;
+  background: #fff;
+  border-right: 1px solid #e4e4e4;
+  border-radius: 0 0 18px 0;
+}
+
+.service-links {
+  margin-top: 10px;
+  gap: 13px;
+  font-size: 10px;
+  color: #707070;
+}
+
+/* --------------------------------------------
+   로고 / 검색 / 아이콘
+-------------------------------------------- */
+
+.header-main-inner {
+  height: 96px;
+  grid-template-columns: 185px 560px 1fr;
+  gap: 24px;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+.search-box {
+  width: 560px;
+  height: 48px;
+  border: 1px solid #d6d6d6;
+  border-radius: 26px;
+}
+
+.search-box select {
+  width: 110px;
+  padding-left: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #242424;
+}
+
+.search-box input {
+  padding-left: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+.search-button {
+  width: 52px;
+  font-size: 22px;
+  color: #111;
+}
+
+.header-icons {
+  gap: 18px;
+}
+
+.header-icons button {
+  width: 46px;
+  height: 46px;
+  font-size: 21px;
+}
+
+.my-button {
+  background: #4fc72e;
+  box-shadow: 0 4px 12px rgba(79, 199, 46, .25);
+}
+
+/* --------------------------------------------
+   GNB
+-------------------------------------------- */
+
+.gnb {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.gnb-inner {
+  height: 62px;
+  min-height: 62px;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: 23px;
+}
+
+.menu-button {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border-color: #d7d7d7;
+}
+
+.menu-button span {
+  width: 17px;
+}
+
+.gnb-menu {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 31px;
+  min-width: 0;
+}
+
+.gnb-menu li {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.gnb-menu a {
+  font-size: 14px;
+  line-height: 1;
+  color: #222;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.gnb-menu li.active a,
+.gnb-menu li:nth-child(2) a,
+.gnb-menu li:nth-child(5) a {
+  color: #249b2b;
+}
+
+.gnb-right {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 22px;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #6f6f6f;
+}
+
+.gnb-right li:nth-child(2) a {
+  color: #299e2a;
+  font-weight: 700;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    max-width: calc(100% - 32px);
+  }
+
+  .top-promo-link {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .gnb-right {
+    display: none;
+  }
+
+  .gnb-inner {
+    grid-template-columns: 44px 1fr;
+  }
+}
+
+/* ============================================
+   v11 - 실제 교보문고형 푸터
+============================================ */
+.footer { margin-top:0; border-top:1px solid #e5e5e5; background:#fff; }
+.notice-bar { border-top:1px solid #eee; border-bottom:1px solid #eee; }
+.notice-inner { height:62px; grid-template-columns:auto minmax(0,1fr) auto minmax(0,1fr); font-size:12px; }
+.footer-main { padding:42px 0 54px; align-items:flex-start; }
+.footer-left { flex:1; min-width:0; }
+.footer-kyobo-logo { display:block; width:168px; height:auto; margin-bottom:25px; }
+.footer-links { gap:0; margin-bottom:24px; color:#555; }
+.footer-links li { display:flex; align-items:center; }
+.footer-links li:not(:last-child)::after { content:""; width:1px; height:10px; background:#ddd; margin:0 12px; }
+.footer-links strong { color:#111; }
+.company-info { font-size:11px; line-height:1.9; color:#777; }
+.footer-right { width:420px; display:flex; flex-direction:column; align-items:flex-end; gap:28px; }
+.footer-selects { width:100%; justify-content:flex-end; }
+.footer-selects select { width:180px; height:40px; border-radius:20px; color:#666; }
+.certification-row { display:flex; align-items:center; justify-content:flex-end; gap:28px; width:100%; }
+.certification-item { display:flex; align-items:center; gap:10px; color:#777; font-size:10px; line-height:1.45; }
+.certification-item.kcsi img { width:122px; max-height:48px; object-fit:contain; }
+.certification-item.isms img { width:58px; height:auto; object-fit:contain; }
+@media(max-width:1024px){
+ .footer-main{flex-direction:column}
+ .footer-right{width:100%;align-items:flex-start}
+ .footer-selects,.certification-row{justify-content:flex-start}
+}
+
+
+/* ============================================
+   v12 - 푸터 레이아웃 실제 사이트 비율 보정
+============================================ */
+
+.notice-inner {
+  column-gap: 20px;
+}
+
+.footer-main {
+  gap: 48px;
+}
+
+.footer-right {
+  gap: 18px;
+}
+
+.footer-selects {
+  gap: 12px;
+}
+
+.certification-row {
+  gap: 24px;
+}
+
+.certification-item.kcsi img {
+  width: 128px;
+}
+
+.footer-kyobo-logo {
+  margin-bottom: 22px;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+
+
+/* ============================================
+   v17 - 통합검색 자동완성
+============================================ */
+
+.search-area {
+  position: relative;
+  width: 560px;
+}
+
+.search-area .search-box {
+  width: 100%;
+}
+
+.search-preview {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+
+  width: 800px;
+
+  background: #fff;
+  border: 1px solid #222;
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, .12);
+
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.search-preview[hidden] {
+  display: none;
+}
+
+
+/* --------------------------------------------
+   상단 : 도서목록 + 상세
+-------------------------------------------- */
+
+.search-preview-main {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.12fr)
+    minmax(0, .88fr);
+
+  min-height: 330px;
+}
+
+.search-result-list {
+  padding: 26px 28px;
+  border-right: 1px solid #eee;
+}
+
+.search-result-list > h3,
+.search-related-box > h3 {
+  margin-bottom: 16px;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.search-book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.search-book-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 14px;
+
+  padding: 8px;
+
+  border-radius: 10px;
+
+  transition:
+    background-color .15s ease;
+}
+
+.search-book-item:hover,
+.search-book-item.is-active {
+  background: #f7f8fa;
+}
+
+.search-book-thumb {
+  width: 54px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-book-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.search-book-copy {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.search-book-copy strong {
+  color: #222;
+
+  font-size: 12px;
+  line-height: 1.35;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.search-book-copy span {
+  color: #777;
+  font-size: 10px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-book-copy b {
+  color: #111;
+  font-size: 11px;
+}
+
+
+/* --------------------------------------------
+   오른쪽 선택 도서 상세
+-------------------------------------------- */
+
+.search-book-detail {
+  padding: 26px 28px;
+}
+
+.search-detail-link {
+  display: block;
+  color: inherit;
+}
+
+.search-detail-top {
+  display: grid;
+  grid-template-columns:
+    118px
+    minmax(0, 1fr);
+
+  gap: 20px;
+}
+
+.search-detail-cover {
+  width: 118px;
+  height: 165px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-detail-cover img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, .08);
+}
+
+.search-no-image {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #eee;
+
+  color: #aaa;
+  font-size: 11px;
+}
+
+.search-detail-info {
+  padding-top: 6px;
+}
+
+.search-detail-info h3 {
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.search-detail-info p {
+  margin-bottom: 10px;
+
+  color: #777;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.search-detail-info strong {
+  color: #38a52d;
+  font-size: 13px;
+}
+
+.search-detail-description {
+  margin-top: 18px;
+
+  padding: 16px;
+
+  border: 1px solid #eee;
+  border-radius: 8px;
+
+  color: #777;
+
+  font-size: 11px;
+  line-height: 1.65;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* --------------------------------------------
+   하단 : 인물 / 이벤트
+-------------------------------------------- */
+
+.search-preview-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid #eee;
+}
+
+.search-related-box {
+  min-height: 105px;
+
+  padding: 22px 28px;
+}
+
+.search-related-box + .search-related-box {
+  border-left: 1px solid #eee;
+}
+
+.search-person {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 7px;
+}
+
+.search-person strong {
+  font-size: 12px;
+}
+
+.search-person span,
+.search-muted {
+  color: #888;
+  font-size: 10px;
+}
+
+
+/* --------------------------------------------
+   검색 하단
+-------------------------------------------- */
+
+.search-preview-footer {
+  height: 46px;
+
+  padding: 0 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #eee;
+
+  color: #777;
+  font-size: 10px;
+}
+
+.search-preview-footer button {
+  border: 0;
+  background: transparent;
+
+  color: #444;
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.search-empty {
+  padding: 24px 0;
+
+  color: #999;
+  font-size: 11px;
+}
+
+
+/* --------------------------------------------
+   태블릿
+-------------------------------------------- */
+
+@media screen and (max-width: 1024px) {
+
+  .search-area {
+    width: 100%;
+  }
+
+  .search-preview {
+    width: min(
+      800px,
+      calc(100vw - 40px)
+    );
+  }
+
+}
+
+
+/* --------------------------------------------
+   모바일
+-------------------------------------------- */
+
+@media screen and (max-width: 700px) {
+
+  .search-preview {
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100vw - 24px);
+  }
+
+  .search-preview-main {
+    grid-template-columns: 1fr;
+  }
+
+  .search-result-list {
+    border-right: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .search-book-detail {
+    display: none;
+  }
+
+  .search-preview-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .search-related-box + .search-related-box {
+    border-left: 0;
+    border-top: 1px solid #eee;
+  }
+
+}
+
+
+/* ============================================
+   v18 - 검색창 / 자동완성 패널 최종 미세조정
+============================================ */
+
+/*
+  목표
+  1. 실제 교보문고처럼 검색창을 조금 더 넓게
+  2. 검색창과 자동완성 패널 사이 간격 축소
+  3. 패널 전체 폭 확대
+  4. 왼쪽 목록 / 오른쪽 상세 비율 조정
+  5. 내부 여백을 줄여 전체 높이 압축
+*/
+
+
+/* --------------------------------------------
+   검색창
+-------------------------------------------- */
+
+.search-area {
+  width: 590px;
+}
+
+.search-area .search-box {
+  height: 48px;
+}
+
+.search-area .search-box select {
+  min-width: 98px;
+  padding-left: 17px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.search-area .search-box input {
+  font-size: 13px;
+}
+
+.search-area .search-button {
+  width: 48px;
+}
+
+
+/* --------------------------------------------
+   자동완성 전체 패널
+-------------------------------------------- */
+
+.search-preview {
+  top: calc(100% + 6px);
+
+  width: 820px;
+
+  border-radius: 15px;
+}
+
+
+/* --------------------------------------------
+   상단 2열 비율
+-------------------------------------------- */
+
+.search-preview-main {
+  grid-template-columns:
+    1.08fr
+    .92fr;
+
+  min-height: 308px;
+}
+
+.search-result-list {
+  padding: 22px 24px 20px;
+}
+
+.search-book-detail {
+  padding: 22px 24px 20px;
+}
+
+
+/* --------------------------------------------
+   왼쪽 결과 목록
+-------------------------------------------- */
+
+.search-result-list > h3 {
+  margin-bottom: 11px;
+
+  font-size: 14px;
+}
+
+.search-book-list {
+  gap: 5px;
+}
+
+.search-book-item {
+  grid-template-columns:
+    50px
+    minmax(0, 1fr);
+
+  gap: 12px;
+
+  min-height: 70px;
+
+  padding: 6px 8px;
+}
+
+.search-book-thumb {
+  width: 50px;
+  height: 66px;
+}
+
+.search-book-copy {
+  gap: 3px;
+}
+
+.search-book-copy strong {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.search-book-copy span {
+  font-size: 10px;
+}
+
+.search-book-copy b {
+  font-size: 11px;
+}
+
+
+/* --------------------------------------------
+   오른쪽 상세
+-------------------------------------------- */
+
+.search-detail-top {
+  grid-template-columns:
+    108px
+    minmax(0, 1fr);
+
+  gap: 18px;
+}
+
+.search-detail-cover {
+  width: 108px;
+  height: 150px;
+}
+
+.search-detail-info {
+  padding-top: 4px;
+}
+
+.search-detail-info h3 {
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.search-detail-info p {
+  margin-bottom: 8px;
+
+  font-size: 10px;
+}
+
+.search-detail-info strong {
+  font-size: 12px;
+}
+
+.search-detail-description {
+  margin-top: 14px;
+
+  padding: 13px 14px;
+
+  font-size: 10px;
+  line-height: 1.58;
+
+  -webkit-line-clamp: 4;
+}
+
+
+/* --------------------------------------------
+   하단 인물 / 이벤트
+-------------------------------------------- */
+
+.search-preview-bottom {
+  min-height: 90px;
+}
+
+.search-related-box {
+  min-height: 90px;
+
+  padding: 18px 24px;
+}
+
+.search-related-box > h3 {
+  margin-bottom: 11px;
+
+  font-size: 13px;
+}
+
+.search-person {
+  margin-bottom: 5px;
+}
+
+.search-person strong {
+  font-size: 11px;
+}
+
+.search-person span,
+.search-muted {
+  font-size: 9px;
+}
+
+
+/* --------------------------------------------
+   패널 하단
+-------------------------------------------- */
+
+.search-preview-footer {
+  height: 42px;
+
+  padding: 0 22px;
+
+  font-size: 9px;
+}
+
+.search-preview-footer button {
+  font-size: 10px;
+}
+
+
+/* --------------------------------------------
+   실제 사이트처럼 패널을 검색창 기준 왼쪽에 정렬
+-------------------------------------------- */
+
+.header-main .search-area {
+  flex: 0 0 590px;
+}
+
+
+/* --------------------------------------------
+   1200px 이하에서 너무 넘치지 않도록
+-------------------------------------------- */
+
+@media screen and (max-width: 1280px) {
+
+  .search-area {
+    width: 560px;
+  }
+
+  .header-main .search-area {
+    flex-basis: 560px;
+  }
+
+  .search-preview {
+    width: 780px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .search-area {
+    width: 100%;
+  }
+
+  .header-main .search-area {
+    flex-basis: auto;
+  }
+
+  .search-preview {
+    width: min(
+      780px,
+      calc(100vw - 32px)
+    );
+  }
+
+}
+
+
+
+/* ============================================
+   v19 - 실제 교보문고 검색패널 동작/디자인 보정
+============================================ */
+
+/* 내부 세로 나눔선 제거 */
+.search-result-list {
+  border-right: 0 !important;
+}
+
+.search-related-box + .search-related-box {
+  border-left: 0 !important;
+}
+
+/* 하단 두 영역은 여백으로만 구분 */
+.search-preview-bottom {
+  column-gap: 42px;
+  padding: 0 24px;
+}
+
+.search-related-box {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* --------------------------------------------
+   도서 리스트 : 책 + 장바구니
+-------------------------------------------- */
+
+.search-book-row {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    38px;
+
+  align-items: center;
+  gap: 12px;
+}
+
+.search-book-item {
+  width: 100%;
+}
+
+.search-cart-button {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #555;
+
+  cursor: pointer;
+
+  transition:
+    border-color .15s ease,
+    color .15s ease,
+    background-color .15s ease;
+}
+
+.search-cart-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.search-cart-button:hover {
+  border-color: #4caf35;
+  color: #4caf35;
+}
+
+.search-cart-button.is-added {
+  background: #4caf35;
+  border-color: #4caf35;
+  color: #fff;
+}
+
+
+/* --------------------------------------------
+   페이지네이션
+-------------------------------------------- */
+
+.search-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  color: #666;
+  font-size: 10px;
+}
+
+.search-pagination button {
+  width: 20px;
+  height: 20px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  background: transparent;
+
+  color: #777;
+  font-size: 17px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.search-book-pagination {
+  margin-top: 10px;
+}
+
+
+/* --------------------------------------------
+   이벤트
+-------------------------------------------- */
+
+.search-related-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.search-related-heading h3 {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+.search-event-list {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.search-event-card {
+  min-width: 0;
+}
+
+.search-event-visual {
+  height: 86px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 18px;
+
+  background: #f2eeee;
+}
+
+.search-event-card:nth-child(2) .search-event-visual {
+  background: #fff0ef;
+}
+
+.search-event-visual span {
+  font-size: 28px;
+}
+
+.search-event-copy {
+  margin-top: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.search-event-copy strong {
+  font-size: 11px;
+  line-height: 1.35;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-event-copy span {
+  color: #999;
+  font-size: 9px;
+}
+
+
+/* --------------------------------------------
+   실제 교보문고 비율처럼 하단을 조금 넓게
+-------------------------------------------- */
+
+.search-preview-bottom {
+  min-height: 145px;
+}
+
+.search-related-box {
+  min-height: 145px;
+}
+
+
+/* --------------------------------------------
+   패널 전체 높이/균형 재조정
+-------------------------------------------- */
+
+.search-preview-main {
+  min-height: 340px;
+}
+
+.search-result-list,
+.search-book-detail {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+
+/* 상세 설명 조금 더 실제 사이트처럼 */
+.search-detail-description {
+  min-height: 104px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+}
+
+
+/* 모바일 */
+@media screen and (max-width: 700px) {
+
+  .search-preview-bottom {
+    padding: 0 18px;
+  }
+
+  .search-event-list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==========================================================
+   V27 - 실제 헤더 아이콘 + 오늘의 선택 링크
+========================================================== */
+
+.header-icons {
+  gap: 18px;
+}
+
+.header-icon-button {
+  position: relative;
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.header-icon-button img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
+
+.header-icons .my-button {
+  background: var(--kyobo-green);
+}
+
+.header-icons .my-button img {
+  width: 23px;
+  height: 23px;
+  filter: invert(1);
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #565bd0;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.today-featured-link {
+  display: grid;
+  grid-template-columns: inherit;
+  gap: inherit;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.today-featured-link:hover .featured-info h3 {
+  text-decoration: underline;
+}
+
+/* 브라우저가 이미지를 억지로 흐리게 보간하지 않도록 */
+.book-cover img,
+.featured-cover img,
+.today-thumb img,
+.search-book-list img,
+.search-book-detail img {
+  image-rendering: auto;
+  backface-visibility: hidden;
+}
+
+
+/* V28: 오늘의 선택 링크는 main.css가 실제 레이아웃을 결정 */
+.today-featured-link {
+  color: inherit;
+  text-decoration: none;
+}

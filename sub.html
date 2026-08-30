@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도서 상세 | 교보문고 포트폴리오</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/sub.css">
+  <script type="module" src="js/sub.js"></script>
+</head>
+
+<body>
+  <!-- 상단 서비스 바 -->
+  <div class="sub-service-bar">
+    <div class="container sub-service-inner">
+      <div class="sub-service-tabs">
+        <b>교보문고</b><b>eBook</b><b>sam</b><b>핫트랙스</b><span>바로출판</span>
+      </div>
+      <div class="sub-service-links">
+        <span>회원가입</span><span>로그인</span><span>회원혜택</span>
+        <span>주문배송</span><span>매장안내</span><span>고객센터</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더 -->
+  <header class="sub-header">
+    <div class="container sub-header-main">
+      <a class="sub-logo" href="index.html" aria-label="홈으로 이동">
+        <img src="img/logo/logo.svg" alt="교보문고">
+      </a>
+
+      <form class="sub-search" id="subSearchForm">
+        <select aria-label="검색 범위">
+          <option>통합검색</option>
+        </select>
+        <input id="subSearchInput" type="search" placeholder="첫 내한 전시 화가 웨인 티보 아트북">
+        <button type="submit" aria-label="검색">⌕</button>
+      </form>
+
+      <div class="sub-head-icons" aria-label="사용자 메뉴">
+        <button
+          type="button"
+          class="sub-icon-button icon-cart"
+          id="headerCartButton"
+          aria-label="장바구니"
+        >
+          <img src="img/icon/cart.png" alt="">
+          <span class="cart-count-badge" id="subCartBadge" hidden>0</span>
+        </button>
+
+        <button
+          class="sub-icon-button sub-user"
+          type="button"
+          aria-label="마이페이지"
+        >
+          <img src="img/icon/user.png" alt="">
+        </button>
+      </div>
+    </div>
+
+    <nav class="sub-gnb">
+      <div class="container sub-gnb-inner">
+        <button class="sub-menu" aria-label="전체메뉴">☰</button>
+        <b>김초엽X펩톤</b><b>오디세이</b><span>베스트</span><span>이벤트</span>
+        <b>주말특가</b><span>바로펀딩</span><span>신상품</span><span>PICKS</span><span>컬처라운지</span>
+        <i></i>
+        <span>오늘의 미션</span><b>할인혜택</b><span>최후의 1인은?</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="sub-main">
+    <div class="container">
+      <!-- 카테고리 -->
+      <div class="breadcrumb" id="breadcrumb">
+        ⌂ <span>›</span> 국내도서 <span>›</span> 인문 <span>›</span> 교양인문학
+      </div>
+
+      <!-- 상품 타이틀 -->
+      <section class="product-title-block">
+        <button class="share-button" id="shareButton" aria-label="공유">
+          <span>↗</span>
+        </button>
+        <h1 id="bookTitle">도서 제목</h1>
+        <p id="bookSubtitle">도서 부제</p>
+
+        <div class="format-tabs">
+          <button class="active">
+            <span>국내도서</span>
+            <b id="tabBookPrice">-</b>
+          </button>
+          <button>
+            <span>외국도서</span>
+            <b>35,740원</b>
+          </button>
+          <button>
+            <span>eBook</span>
+            <b>10,350원</b>
+          </button>
+        </div>
+      </section>
+
+      <!-- 상품 핵심 정보 -->
+      <section class="product-overview">
+        <aside class="product-meta">
+          <div class="meta-author">
+            <p><strong id="bookAuthors">저자</strong></p>
+            <p><span id="bookPublisher">출판사</span> · <span id="bookDate">출간일</span></p>
+          </div>
+
+          <div class="rank" id="bookRank">
+            <span class="rank-icon">♛</span>
+            <b>국내도서 분야 베스트</b>
+          </div>
+
+          <button class="rating-box" type="button">
+            <span class="clovers">✤ ✤ ✤ ✤ ✤</span>
+            <strong id="bookRating">9.5</strong>
+            <small id="bookReviewCount">리뷰 1,386 ›</small>
+          </button>
+
+          <div class="notice-row">
+            <span>신간 소식 가장 먼저 받아보세요.</span>
+            <button type="button">알림신청</button>
+          </div>
+
+          <button class="recommend-banner" type="button">
+            <span id="recommendText">이 책을 읽은 독자들이 함께 찾는 콘텐츠</span>
+            <b>›</b>
+          </button>
+        </aside>
+
+        <div class="product-cover-area">
+          <div class="product-cover-frame">
+            <img id="bookCover" src="" alt="">
+          </div>
+          <div class="cover-tools">
+            <button type="button" id="coverZoomButton">🔍 크게보기</button>
+            <button type="button" id="previewButton">미리보기</button>
+          </div>
+        </div>
+
+        <aside class="product-purchase">
+          <span class="md-badge">MD의 선택</span>
+
+          <div class="price-line">
+            <em id="discountRate">10%</em>
+            <strong id="salePrice">-</strong>
+            <del id="originalPrice"></del>
+          </div>
+
+          <dl class="purchase-info-list">
+            <div>
+              <dt>통합포인트 <span>ⓘ</span></dt>
+              <dd>
+                <b id="pointValue">-</b> <span>(5% 적립)</span>
+                <small>5만원 이상 구매 시 2천원 추가 적립</small>
+              </dd>
+            </div>
+            <div>
+              <dt>결제혜택</dt>
+              <dd>카드/간편결제 혜택을 확인해 보세요! <span>⌄</span></dd>
+            </div>
+            <div>
+              <dt>배송비 <span>ⓘ</span></dt>
+              <dd>무료배송</dd>
+            </div>
+            <div>
+              <dt>배송안내 <span>ⓘ</span></dt>
+              <dd>
+                <b>내일(일) 도착</b>
+                <small>로그인 후 정확한 배송 안내를 확인하세요.</small>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <!-- 하단 상품 CTA 앞 여백/기능 -->
+      <div class="overview-bottom-tools">
+        <span></span>
+        <div class="preview-links">
+          <button type="button">🔍 크게보기</button>
+          <button type="button">미리보기</button>
+        </div>
+        <span></span>
+      </div>
+
+      <!-- 함께 구매 -->
+      <section class="related-strip" id="relatedStrip">
+        <div class="section-head">
+          <h2>함께 구매한 책</h2>
+          <div class="carousel-arrows">
+            <button type="button">‹</button>
+            <button type="button">›</button>
+          </div>
+        </div>
+        <div class="related-books" id="relatedBooks"></div>
+      </section>
+
+      <!-- 이벤트 -->
+      <section class="event-strip">
+        <div class="section-head">
+          <h2>이 책의 이벤트</h2>
+          <button type="button" class="more-btn">더보기 ›</button>
+        </div>
+        <div class="event-cards">
+          <article><span class="event-chip">EVENT</span><strong>교보문고 독서 이벤트</strong><p>책과 함께 즐기는 특별한 혜택을 확인해 보세요.</p></article>
+          <article><span class="event-chip">BENEFIT</span><strong>회원 전용 혜택</strong><p>적립과 할인 혜택을 한눈에 확인할 수 있어요.</p></article>
+          <article><span class="event-chip">PICKS</span><strong>함께 읽기 좋은 책</strong><p>MD가 고른 연관 도서를 만나보세요.</p></article>
+        </div>
+      </section>
+    </div>
+
+    <!-- 상세 탭: 전체 폭 경계 -->
+    <nav class="detail-tabs" id="detailTabs">
+      <div class="container detail-tabs-inner">
+        <a href="#productInfo">상품정보</a>
+        <a href="#intro">책 소개</a>
+        <a href="#author">작가정보</a>
+        <a href="#review">리뷰</a>
+      </div>
+    </nav>
+
+    <!-- 상세 콘텐츠 -->
+    <div class="container detail-layout">
+      <div class="detail-main">
+
+        <!-- 상품정보 -->
+        <section class="content-section product-info-section" id="productInfo">
+          <div class="section-head">
+            <h2>상품정보</h2>
+          </div>
+
+          <div class="product-info-cards">
+            <article>
+              <span>쪽수</span>
+              <b id="infoPages">-</b>
+            </article>
+            <article>
+              <span>크기</span>
+              <b>135 × 200 mm</b>
+            </article>
+            <article>
+              <span>무게</span>
+              <b>약 400 g</b>
+            </article>
+            <article>
+              <span>ISBN</span>
+              <b id="infoIsbn">-</b>
+            </article>
+          </div>
+        </section>
+
+        <!-- 책 소개 -->
+        <section class="content-section" id="intro">
+          <h2>책 소개</h2>
+          <p class="section-lead" id="introLead"></p>
+          <p class="body-copy" id="introBody"></p>
+
+          <div class="cloud-only-detail" id="cloudOnlyDetail" hidden>
+            <img src="img/sub/information.jpg" alt="구름관찰자를 위한 그림책 상세 이미지">
+          </div>
+        </section>
+
+        <!-- 책의 일부/추천 영역 -->
+        <section class="content-section highlight-section">
+          <div class="section-head">
+            <h2>이 책을 읽고 싶은 이유</h2>
+          </div>
+          <div class="highlight-card">
+            <span>MD 추천</span>
+            <blockquote id="highlightQuote">책의 핵심 메시지를 소개합니다.</blockquote>
+          </div>
+        </section>
+
+        <!-- 작가 -->
+        <section class="content-section" id="author">
+          <h2>작가정보</h2>
+          <div class="author-card">
+            <div class="author-avatar">저자</div>
+            <div class="author-copy">
+              <div><strong id="authorName">저자</strong><span> 저자(글)</span></div>
+              <p id="authorDescription"></p>
+              <div class="author-tags">
+                <span>#저자</span><span>#논픽션</span><span>#교양</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 목차 -->
+        <section class="content-section" id="toc">
+          <h2>목차</h2>
+          <div class="text-box" id="tocText"></div>
+        </section>
+
+        <!-- 책 속으로 -->
+        <section class="content-section" id="excerpt">
+          <h2>책 속으로</h2>
+          <p class="body-copy" id="excerptText"></p>
+        </section>
+
+        <!-- 출판사 서평 -->
+        <section class="content-section" id="publisherReview">
+          <h2>출판사 서평</h2>
+          <p class="body-copy" id="publisherReviewText"></p>
+        </section>
+
+        <!-- 기본 정보 -->
+        <section class="content-section basic-info-section" id="basicInfo">
+          <h2>기본정보</h2>
+          <dl class="basic-info-table">
+            <div><dt>ISBN</dt><dd id="basicIsbn">-</dd></div>
+            <div><dt>쪽수</dt><dd id="basicPages">-</dd></div>
+            <div><dt>크기</dt><dd>135 × 200 mm</dd></div>
+            <div><dt>저자</dt><dd id="basicAuthor">-</dd></div>
+            <div><dt>출판사</dt><dd id="basicPublisher">-</dd></div>
+            <div><dt>출간일</dt><dd id="basicDate">-</dd></div>
+          </dl>
+        </section>
+
+        <!-- 리뷰 -->
+        <section class="content-section review-section" id="review">
+          <div class="review-title-row">
+            <h2>Klover 리뷰</h2>
+            <strong><span id="reviewScore">9.5</span> / 10</strong>
+          </div>
+
+          <div class="review-dashboard">
+            <div class="review-score-box">
+              <span class="review-clovers">✤ ✤ ✤ ✤ ✤</span>
+              <b id="reviewBigScore">9.5</b>
+              <p>구매자들이 남긴 도서 평가입니다.</p>
+            </div>
+
+            <div class="review-bars">
+              <div><span>좋았어요</span><i><b style="width:92%"></b></i><em>92%</em></div>
+              <div><span>집중돼요</span><i><b style="width:86%"></b></i><em>86%</em></div>
+              <div><span>도움돼요</span><i><b style="width:78%"></b></i><em>78%</em></div>
+            </div>
+          </div>
+
+          <div class="review-write">
+            <div>
+              <strong>이 책을 읽으셨나요?</strong>
+              <p>직접 읽은 느낌을 Klover 리뷰로 남겨보세요.</p>
+            </div>
+            <button type="button">리뷰 작성</button>
+          </div>
+
+          <div class="review-list">
+            <article>
+              <div class="review-user"><b>구매자</b><span>✤ ✤ ✤ ✤ ✤</span></div>
+              <p>책을 읽은 독자의 리뷰가 표시되는 영역입니다. 실제 서비스 데이터를 복제하지 않고 UI 형태만 재현했습니다.</p>
+              <small>2026.08.29</small>
+            </article>
+            <article>
+              <div class="review-user"><b>독서회원</b><span>✤ ✤ ✤ ✤ ✤</span></div>
+              <p>읽기 전 기대와 읽은 뒤의 생각을 정리할 수 있는 리뷰 영역입니다.</p>
+              <small>2026.08.28</small>
+            </article>
+          </div>
+
+          <div class="cloud-only-review" id="cloudOnlyReview" hidden>
+            <img src="img/sub/review1.jpg" alt="구름관찰자를 위한 그림책 리뷰 참고 이미지">
+          </div>
+        </section>
+      </div>
+
+      <!-- 우측 사이드 -->
+      <aside class="detail-side">
+        <div class="side-sticky">
+          <h3>이 분야의 베스트</h3>
+          <ol id="sideBest"></ol>
+
+          <div class="side-divider"></div>
+
+          <h3>함께 보면 좋은 책</h3>
+          <div class="side-mini-book">
+            <div class="mini-placeholder">BOOK</div>
+            <p>연관 도서 추천 영역</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- 하단 구매 고정 바 -->
+  <div class="purchase-dock" id="purchaseDock">
+    <div class="container purchase-dock-inner">
+      <div class="dock-total">
+        <span>총 상품금액</span>
+        <strong id="dockPrice">-</strong>
+      </div>
+
+      <div class="dock-actions">
+        <div class="qty">
+          <button id="qtyMinus" type="button">−</button>
+          <span id="qtyValue">1</span>
+          <button id="qtyPlus" type="button">＋</button>
+        </div>
+        <button class="wish" id="wishButton" type="button" aria-label="찜">♡</button>
+        <button id="giftButton" type="button">🎁 선물하기</button>
+        <button class="outline" id="cartButton" type="button">장바구니</button>
+        <button class="outline" id="pickupButton" type="button">바로드림</button>
+        <button class="primary" id="orderButton" type="button">주문하기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal" id="bookModal" hidden>
+    <div class="book-modal-backdrop" data-close-modal></div>
+    <div class="book-modal-panel" role="dialog" aria-modal="true" aria-label="도서 표지 크게보기">
+      <button class="book-modal-close" type="button" data-close-modal>×</button>
+      <img id="modalCover" src="" alt="">
+      <strong id="modalTitle"></strong>
+    </div>
+  </div>
+
+  <div class="sub-toast" id="subToast" hidden></div>
+</body>
+</html>

@@ -1,0 +1,3039 @@
+@charset "utf-8";
+
+main {
+  overflow: hidden;
+}
+
+.hero-section {
+  padding-top: 30px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+}
+
+.hero-slider {
+  position: relative;
+  min-height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  min-height: 380px;
+  padding: 58px 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: #18b8c7;
+  color: #fff;
+  transition: background .35s ease;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #111;
+  font-size: 12px;
+}
+
+.hero-copy h2 {
+  font-size: 34px;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+.hero-copy p {
+  font-size: 15px;
+  opacity: .95;
+}
+
+.hero-book-mockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 20px;
+}
+
+.mock-book {
+  width: 126px;
+  height: 180px;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+
+.mock-book-two {
+  transform: translateY(-18px);
+}
+
+.hero-controls {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: rgba(0,0,0,.22);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+}
+
+.hero-controls button,
+.hero-controls span {
+  color: inherit;
+  font-size: 12px;
+}
+
+.side-promo {
+  border-radius: 18px;
+  background: #f5f5f5;
+  overflow: hidden;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.side-promo-image {
+  height: 250px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #ddd, #f7f7f7);
+  color: #888;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.side-promo span {
+  display: block;
+  margin: 18px 0 5px;
+  color: #596cb0;
+  font-size: 12px;
+}
+
+.side-promo strong {
+  display: block;
+  font-size: 16px;
+}
+
+.side-promo p {
+  margin-top: 8px;
+  color: #888;
+  font-size: 12px;
+}
+
+.quick-menu {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 14px;
+}
+
+.quick-menu a {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.quick-menu span {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 8px;
+  border-radius: 14px;
+  background: #f7f7f7;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+.book-section {
+  padding: 64px 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.title-with-tabs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.tabs button {
+  color: #777;
+  font-size: 12px;
+}
+
+.tabs button.active {
+  color: #263b86;
+  font-weight: 800;
+}
+
+.more-link {
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.book-row-wrap,
+.today-layout {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.circle-arrow {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #888;
+  background: #fff;
+}
+
+.book-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.book-card {
+  min-width: 0;
+  display: block;
+}
+
+.book-cover {
+  position: relative;
+  aspect-ratio: 3 / 4.25;
+  margin-bottom: 13px;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.book-meta {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #888;
+}
+
+.book-price {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.book-empty {
+  min-height: 260px;
+  border: 1px dashed #ddd;
+  background: #fafafa;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.today-layout {
+  gap: 20px;
+}
+
+.today-featured {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  align-items: center;
+  gap: 28px;
+}
+
+.featured-cover {
+  width: 210px;
+  aspect-ratio: 3 / 4.2;
+  background: #eee;
+  overflow: hidden;
+}
+
+.featured-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skeleton-cover {
+  background:
+    linear-gradient(90deg, #eee 25%, #f7f7f7 37%, #eee 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.5s infinite linear;
+}
+
+@keyframes skeleton {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+
+.featured-info h3 {
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.featured-info strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #485ea8;
+  font-size: 14px;
+}
+
+.featured-info p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.today-thumbs {
+  width: 43%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.today-thumb {
+  aspect-ratio: 3 / 4.2;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.today-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai-picks {
+  background: #fff;
+}
+
+.ai-picks-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.ai-picks-copy > span {
+  color: #42a727;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ai-picks-copy h2 {
+  font-size: 38px;
+  margin: 5px 0 22px;
+}
+
+.ai-picks-copy p {
+  color: #777;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.ai-book-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.best-section {
+  padding: 70px 0;
+  background: #fafafa;
+}
+
+.best-layout {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 35px;
+}
+
+.best-side h2 {
+  display: inline-block;
+  margin-right: 14px;
+  font-size: 26px;
+}
+
+.best-side > ul {
+  margin-top: 38px;
+  display: grid;
+  gap: 16px;
+  color: #777;
+  font-size: 13px;
+}
+
+.best-side li.active {
+  color: #283c88;
+  font-weight: 800;
+}
+
+.best-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 35px 24px;
+}
+
+.best-card {
+  position: relative;
+}
+
+.rank-badge {
+  position: absolute;
+  left: 0;
+  top: calc(100% - 8px);
+  transform: translateY(-100%);
+  z-index: 2;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  background: #777;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.best-card:nth-child(1) .rank-badge {
+  background: #4e73d4;
+}
+
+.casting-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.casting-image {
+  aspect-ratio: 1.25 / 1;
+  margin-bottom: 12px;
+  display: grid;
+  place-items: center;
+  background: #f3f3f3;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.casting-grid h3 {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.event-card {
+  min-height: 170px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 28px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.event-blue { background: #6494ee; }
+.event-purple { background: #b7b7f4; color: #222; }
+.event-green { background: #6c826b; }
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-promo {
+    display: none;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .today-featured {
+    grid-template-columns: 170px 1fr;
+  }
+
+  .featured-cover {
+    width: 170px;
+  }
+
+  .today-thumbs {
+    width: 35%;
+  }
+
+  .best-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    min-height: 330px;
+    padding: 38px 28px;
+  }
+
+  .hero-book-mockup {
+    display: none;
+  }
+
+  .hero-copy h2 {
+    font-size: 28px;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .book-section {
+    padding: 45px 0;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .circle-arrow {
+    display: none;
+  }
+
+  .today-layout {
+    display: block;
+  }
+
+  .today-featured {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .featured-cover {
+    width: 130px;
+  }
+
+  .today-thumbs {
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .ai-picks-grid,
+  .best-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-book-grid,
+  .best-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .casting-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading,
+  .title-with-tabs {
+    align-items: flex-start;
+  }
+}
+
+
+/* ============================================
+   실제 교보문고 이미지 자산 적용
+============================================ */
+
+.top-promo {
+  height: 70px;
+  overflow: hidden;
+}
+
+.top-promo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) 270px;
+  align-items: start;
+}
+
+.hero-slider {
+  min-height: 0;
+  aspect-ratio: 890 / 380;
+  background: #f5f5f5;
+}
+
+.hero-slide-link,
+.hero-slide-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide-link img {
+  object-fit: cover;
+}
+
+.hero-side {
+  display: grid;
+  gap: 22px;
+}
+
+.side-promo {
+  padding: 0;
+  background: transparent;
+  border-radius: 14px;
+  position: relative;
+}
+
+.side-promo > a,
+.side-promo img {
+  display: block;
+  width: 100%;
+}
+
+.side-promo img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.side-promo-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.side-promo-dots button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .25);
+}
+
+.side-promo-dots button.active {
+  background: #111;
+}
+
+.mission-banner,
+.mission-banner img {
+  display: block;
+  width: 100%;
+}
+
+.mission-banner img {
+  border-radius: 14px;
+}
+
+.quick-menu span {
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.quick-menu span img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .hero-side {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-promo {
+    height: 50px;
+  }
+
+  .logo img {
+    width: 125px;
+  }
+}
+
+
+/* ============================================
+   v4 - 실제 첫 화면 비율 보정
+============================================ */
+
+.hero-section {
+  padding-top: 30px;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) 255px;
+  gap: 28px;
+  align-items: start;
+}
+
+.hero-slider {
+  aspect-ratio: auto;
+  height: 380px;
+  border-radius: 14px;
+}
+
+.hero-slide-link,
+.hero-slide-link img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide-link img {
+  object-fit: cover;
+}
+
+.hero-controls {
+  right: 14px;
+  bottom: 12px;
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.side-top-links {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  color: #666;
+}
+
+.side-promo {
+  border-radius: 14px;
+}
+
+.side-promo img {
+  width: 100%;
+  height: 308px;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.mission-banner {
+  margin-top: 0;
+}
+
+.mission-banner img {
+  height: 80px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.quick-menu {
+  margin-top: 24px;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+}
+
+.quick-menu span {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+}
+
+.quick-menu a {
+  font-size: 11px;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-side {
+    display: none;
+  }
+}
+
+
+/* ============================================
+   v5 - 히어로 / 우측 카드 / 퀵메뉴 정밀 보정
+============================================ */
+
+.hero-section {
+  padding-top: 18px;
+}
+
+.hero-grid {
+  grid-template-columns: 716px 223px;
+  gap: 29px;
+  align-items: start;
+}
+
+.hero-slider {
+  width: 716px;
+  height: 307px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-slide-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-controls {
+  right: 10px;
+  bottom: 9px;
+  height: 28px;
+  padding: 4px 10px;
+  gap: 5px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, .30);
+}
+
+.hero-controls button,
+.hero-controls span {
+  font-size: 10px;
+}
+
+/* 우측 프로모션 */
+.hero-side {
+  width: 223px;
+  gap: 14px;
+}
+
+.side-promo {
+  width: 223px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.side-promo-link {
+  display: block;
+  background: #f7f7f7;
+}
+
+.side-promo img {
+  display: block;
+  width: 223px;
+  height: 223px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.side-promo-copy {
+  min-height: 84px;
+  padding: 11px 12px 13px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.side-promo-copy span {
+  display: block;
+  margin-bottom: 4px;
+  color: #5363a6;
+  font-size: 10px;
+}
+
+.side-promo-copy strong {
+  display: block;
+  color: #111;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.side-promo-dots {
+  bottom: 91px;
+}
+
+.side-promo-dots button {
+  width: 5px;
+  height: 5px;
+}
+
+/* 미션 */
+.mission-banner {
+  width: 223px;
+  height: 80px;
+  margin-top: 0;
+}
+
+.mission-banner img {
+  width: 223px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* 퀵메뉴는 중앙 배너 폭만 사용 */
+.quick-menu {
+  width: 716px;
+  max-width: none;
+  margin: 24px auto 0;
+  margin-left: calc((100% - 980px) / 2);
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+}
+
+.quick-menu a {
+  min-width: 0;
+  font-size: 10px;
+  color: #666;
+}
+
+.quick-menu span {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 7px;
+  border-radius: 12px;
+  background: #f7f7f7;
+}
+
+.quick-menu span img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 첫 번째 본문 섹션 시작점을 실제처럼 조금 더 띄움 */
+.today-section {
+  padding-top: 70px;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-slider {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 890 / 380;
+  }
+
+  .quick-menu {
+    width: auto;
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+/* ============================================
+   v6 - 메인 첫 화면 실제 자산 원본 크기 기준
+============================================ */
+
+.hero-section {
+  padding-top: 30px;
+}
+
+/*
+  실제 전달받은 원본 자산 크기:
+  main banner = 890 x 380
+  right banner = 274 x 274
+
+  이미지를 억지로 확대하지 않고 원본 CSS 크기로 사용.
+*/
+.hero-grid {
+  grid-template-columns: 890px 274px;
+  gap: 36px;
+  align-items: start;
+}
+
+.hero-slider {
+  width: 890px;
+  height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.hero-slide-link,
+.hero-slide-link img {
+  display: block;
+  width: 890px;
+  height: 380px;
+}
+
+.hero-slide-link img {
+  object-fit: cover;
+}
+
+.hero-controls {
+  right: 13px;
+  bottom: 12px;
+  height: 30px;
+  padding: 5px 12px;
+  gap: 6px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, .30);
+}
+
+.hero-controls button,
+.hero-controls span {
+  font-size: 11px;
+}
+
+/* --------------------------------------------
+   우측 프로모션
+-------------------------------------------- */
+
+.hero-side {
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-promo {
+  width: 274px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f6f6f6;
+}
+
+.side-promo-link {
+  display: block;
+}
+
+.side-promo img {
+  display: block;
+  width: 274px;
+  height: 274px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.side-promo-copy {
+  width: 274px;
+  min-height: 105px;
+  padding: 15px 14px 16px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.side-promo-copy span {
+  display: block;
+  margin-bottom: 6px;
+  color: #5365ad;
+  font-size: 11px;
+}
+
+.side-promo-copy strong {
+  display: block;
+  color: #111;
+  font-size: 15px;
+  line-height: 1.48;
+  font-weight: 700;
+}
+
+.side-promo-dots {
+  bottom: 112px;
+}
+
+.side-promo-dots button {
+  width: 6px;
+  height: 6px;
+}
+
+/* --------------------------------------------
+   미션
+-------------------------------------------- */
+
+.mission-banner {
+  width: 274px;
+  height: auto;
+}
+
+.mission-banner img {
+  display: block;
+  width: 274px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+/* --------------------------------------------
+   Quick Menu
+   실제로는 메인 배너 하단 폭을 기준으로 배치
+-------------------------------------------- */
+
+.quick-menu {
+  width: 890px;
+  max-width: none;
+  margin-top: 30px;
+  margin-left: calc((100% - 1200px) / 2);
+  margin-right: 0;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 16px;
+}
+
+.quick-menu a {
+  font-size: 12px;
+  color: #686868;
+  white-space: nowrap;
+}
+
+.quick-menu span {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 9px;
+  border-radius: 14px;
+  background: #f7f7f7;
+}
+
+/* 오늘의 선택 시작 */
+.today-section {
+  padding-top: 74px;
+}
+
+@media (max-width: 1240px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) 274px;
+    gap: 24px;
+  }
+
+  .hero-slider {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 890 / 380;
+  }
+
+  .hero-slide-link,
+  .hero-slide-link img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .quick-menu {
+    width: auto;
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-side {
+    display: none;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+/* ============================================
+   v7 - 퀵메뉴 위치 구조 수정
+   실제 교보문고처럼:
+   1행 = 메인배너 / 우측배너
+   2행 = 퀵메뉴   / 미션배너
+============================================ */
+
+.hero-section {
+  padding-top: 30px;
+}
+
+/*
+  핵심 수정:
+  기존에는 .quick-menu가 hero-grid 바깥에 있어서
+  우측 카드 + 미션의 전체 높이가 끝난 뒤 출력되었다.
+
+  이제 하나의 2 x 2 grid 안에 넣어
+  메인 배너가 끝나는 즉시 퀵메뉴가 시작된다.
+*/
+.hero-stage {
+  display: grid;
+
+  grid-template-columns:
+    890px
+    274px;
+
+  grid-template-areas:
+    "main side"
+    "quick mission";
+
+  column-gap: 36px;
+  row-gap: 24px;
+
+  align-items: start;
+}
+
+
+/* ==============================
+   메인배너
+============================== */
+
+.hero-slider {
+  grid-area: main;
+
+  width: 890px;
+  height: 380px;
+
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+
+/* ==============================
+   우측 프로모션
+============================== */
+
+.side-promo {
+  grid-area: side;
+
+  width: 274px;
+  height: 380px;
+
+  position: relative;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  background: #f7f7f7;
+}
+
+
+.side-promo-link {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+.side-promo img {
+  display: block;
+
+  width: 274px;
+  height: 274px;
+
+  object-fit: cover;
+}
+
+
+.side-promo-copy {
+  width: 274px;
+  height: 106px;
+  min-height: 0;
+
+  padding: 14px 14px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #f7f7f7;
+}
+
+
+.side-promo-copy span {
+  margin-bottom: 5px;
+
+  color: #5365ad;
+
+  font-size: 11px;
+}
+
+
+.side-promo-copy strong {
+  color: #111;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+
+.side-promo-dots {
+  left: 50%;
+  bottom: 111px;
+
+  transform: translateX(-50%);
+}
+
+
+/* ==============================
+   퀵메뉴
+============================== */
+
+.quick-menu {
+  grid-area: quick;
+
+  width: 890px;
+  max-width: none;
+
+  margin: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(10, 1fr);
+
+  gap: 16px;
+
+  align-items: start;
+}
+
+
+.quick-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+
+  color: #686868;
+
+  font-size: 12px;
+
+  line-height: 1.35;
+
+  white-space: nowrap;
+}
+
+
+.quick-menu span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  margin: 0 0 9px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #f7f7f7;
+}
+
+
+.quick-menu span img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* ==============================
+   미션 배너
+============================== */
+
+.mission-banner {
+  grid-area: mission;
+
+  display: block;
+
+  width: 274px;
+
+  margin: 0;
+}
+
+
+.mission-banner img {
+  display: block;
+
+  width: 274px;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 14px;
+}
+
+
+/*
+  퀵메뉴가 위로 올라왔기 때문에
+  다음 섹션 시작도 이에 맞춰 재조정.
+*/
+.today-section {
+  padding-top: 64px;
+}
+
+
+/* ==============================
+   반응형
+============================== */
+
+@media screen and (max-width: 1240px) {
+
+  .hero-stage {
+    grid-template-columns:
+      minmax(0, 1fr)
+      274px;
+
+    grid-template-areas:
+      "main side"
+      "quick mission";
+
+    column-gap: 24px;
+  }
+
+
+  .hero-slider {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 890 / 380;
+  }
+
+
+  .quick-menu {
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .hero-stage {
+    display: block;
+  }
+
+
+  .side-promo,
+  .mission-banner {
+    display: none;
+  }
+
+
+  .quick-menu {
+    margin-top: 24px;
+
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+
+}
+
+
+/* ============================================
+   v8 - 오늘의 선택 / 도서 리스트 비율 정밀 보정
+============================================ */
+
+/* --------------------------------------------
+   섹션 공통
+-------------------------------------------- */
+
+.book-section {
+  padding: 70px 0;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.section-heading h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+
+.title-with-tabs {
+  gap: 26px;
+}
+
+.tabs {
+  gap: 16px;
+}
+
+.tabs button {
+  font-size: 12px;
+  color: #767676;
+}
+
+.tabs button.active {
+  color: #273c88;
+  font-weight: 800;
+}
+
+.more-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111;
+}
+
+
+/* ============================================
+   오늘의 선택
+============================================ */
+
+.today-section {
+  padding-top: 74px;
+  padding-bottom: 72px;
+}
+
+.today-section .container {
+  position: relative;
+}
+
+.today-layout {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    450px;
+
+  gap: 46px;
+
+  align-items: center;
+}
+
+/*
+  기존 flex 내부의 화살표가 책 영역 폭을 먹고 있었음.
+  실제 교보문고처럼 컨텐츠 바깥쪽에 띄운다.
+*/
+.today-layout > .circle-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.today-layout > .circle-arrow:first-child {
+  left: -62px;
+}
+
+.today-layout > .circle-arrow:last-child {
+  right: -62px;
+}
+
+
+.today-featured {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr);
+
+  gap: 34px;
+
+  align-items: center;
+}
+
+.featured-cover {
+  width: 180px;
+  height: 252px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  overflow: visible;
+}
+
+.featured-cover img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, .12);
+}
+
+.featured-info {
+  min-width: 0;
+}
+
+.featured-info h3 {
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.featured-info strong {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #485ea8;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.featured-description {
+  color: #777;
+
+  font-size: 13px;
+  line-height: 1.65;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  overflow: hidden;
+}
+
+
+.today-thumbs {
+  width: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+.today-thumb {
+  width: 136px;
+  height: 198px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  overflow: visible;
+}
+
+.today-thumb img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 4px 11px rgba(0, 0, 0, .10);
+}
+
+
+/* ============================================
+   공통 도서 캐러셀
+============================================ */
+
+.book-row-wrap {
+  position: relative;
+
+  display: block;
+}
+
+.book-row-wrap > .circle-arrow {
+  position: absolute;
+  top: 42%;
+
+  transform: translateY(-50%);
+
+  z-index: 4;
+}
+
+.book-row-wrap > .row-prev {
+  left: -62px;
+}
+
+.book-row-wrap > .row-next {
+  right: -62px;
+}
+
+
+.book-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/*
+  교보문고는 표지 비율이 제각각이라
+  카드 박스를 강제로 crop하지 않는다.
+*/
+.book-cover {
+  width: 100%;
+  height: 228px;
+
+  margin-bottom: 13px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background: transparent;
+
+  overflow: visible;
+}
+
+.book-cover img {
+  max-width: 100%;
+  max-height: 228px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, .08);
+}
+
+.book-title {
+  font-size: 14px;
+  line-height: 1.48;
+
+  font-weight: 600;
+
+  letter-spacing: -0.25px;
+}
+
+.book-meta {
+  margin-top: 7px;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  color: #888;
+}
+
+.book-price {
+  margin-top: 8px;
+
+  font-size: 13px;
+}
+
+
+/* ============================================
+   MD 추천 이하 일반 섹션 간격
+============================================ */
+
+.today-section + .book-section {
+  padding-top: 68px;
+}
+
+.book-section + .book-section {
+  padding-top: 66px;
+}
+
+
+/* ============================================
+   반응형
+============================================ */
+
+@media screen and (max-width: 1320px) {
+
+  .today-layout > .circle-arrow:first-child,
+  .book-row-wrap > .row-prev {
+    left: -44px;
+  }
+
+  .today-layout > .circle-arrow:last-child,
+  .book-row-wrap > .row-next {
+    right: -44px;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .today-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .today-thumbs {
+    width: 100%;
+  }
+
+  .today-thumb {
+    width: 100%;
+  }
+
+  .book-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .today-featured {
+    grid-template-columns:
+      130px
+      minmax(0, 1fr);
+
+    gap: 20px;
+  }
+
+  .featured-cover {
+    width: 130px;
+    height: 182px;
+  }
+
+  .today-thumbs {
+    gap: 12px;
+  }
+
+  .today-thumb {
+    height: 160px;
+  }
+
+  .book-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ============================================
+   v9 - 실제 교보문고 비율에 더 가깝게 보정
+============================================ */
+
+/* --------------------------------------------
+   섹션 전체 간격
+-------------------------------------------- */
+
+.book-section {
+  padding: 52px 0;
+}
+
+.today-section {
+  padding-top: 58px;
+  padding-bottom: 56px;
+}
+
+.today-section + .book-section {
+  padding-top: 54px;
+}
+
+.book-section + .book-section {
+  padding-top: 52px;
+}
+
+
+/* --------------------------------------------
+   섹션 제목
+-------------------------------------------- */
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.title-with-tabs {
+  gap: 24px;
+}
+
+.tabs {
+  gap: 14px;
+}
+
+.tabs button {
+  font-size: 12px;
+}
+
+.more-link {
+  font-size: 11px;
+}
+
+
+/* ============================================
+   오늘의 선택
+============================================ */
+
+.today-layout {
+  grid-template-columns:
+    minmax(0, 1fr)
+    470px;
+
+  gap: 34px;
+}
+
+.today-featured {
+  grid-template-columns:
+    195px
+    minmax(0, 1fr);
+
+  gap: 28px;
+}
+
+.featured-cover {
+  width: 195px;
+  height: 273px;
+}
+
+.featured-info h3 {
+  margin-bottom: 20px;
+
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.featured-info strong {
+  margin-bottom: 8px;
+
+  font-size: 13px;
+}
+
+.featured-description {
+  font-size: 12px;
+  line-height: 1.65;
+
+  -webkit-line-clamp: 3;
+}
+
+.today-thumbs {
+  gap: 18px;
+}
+
+.today-thumb {
+  width: 145px;
+  height: 210px;
+}
+
+
+/* 오늘의 선택 화살표 */
+.today-layout > .circle-arrow {
+  width: 38px;
+  height: 38px;
+
+  font-size: 24px;
+}
+
+.today-layout > .circle-arrow:first-child {
+  left: -54px;
+}
+
+.today-layout > .circle-arrow:last-child {
+  right: -54px;
+}
+
+
+/* ============================================
+   공통 도서 리스트
+============================================ */
+
+.book-grid {
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.book-cover {
+  height: 250px;
+
+  margin-bottom: 10px;
+}
+
+.book-cover img {
+  max-height: 250px;
+}
+
+.book-title {
+  margin-top: 0;
+
+  font-size: 14px;
+  line-height: 1.42;
+
+  letter-spacing: -0.3px;
+}
+
+.book-meta {
+  margin-top: 5px;
+}
+
+.book-price {
+  margin-top: 6px;
+}
+
+
+/* 캐러셀 화살표 */
+.book-row-wrap > .circle-arrow {
+  width: 38px;
+  height: 38px;
+
+  font-size: 24px;
+
+  top: 43%;
+}
+
+.book-row-wrap > .row-prev {
+  left: -54px;
+}
+
+.book-row-wrap > .row-next {
+  right: -54px;
+}
+
+
+/* --------------------------------------------
+   카드 세로 정렬 안정화
+-------------------------------------------- */
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.book-card .book-cover {
+  flex: 0 0 auto;
+}
+
+.book-card .book-title {
+  min-height: 40px;
+}
+
+
+/* ============================================
+   실제 화면처럼 섹션별 빈 공간 줄이기
+============================================ */
+
+.book-section .container {
+  min-height: 0;
+}
+
+.book-section .book-grid {
+  align-items: start;
+}
+
+
+/* ============================================
+   반응형
+============================================ */
+
+@media screen and (max-width: 1320px) {
+
+  .today-layout > .circle-arrow:first-child,
+  .book-row-wrap > .row-prev {
+    left: -40px;
+  }
+
+  .today-layout > .circle-arrow:last-child,
+  .book-row-wrap > .row-next {
+    right: -40px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .today-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .today-featured {
+    grid-template-columns:
+      175px
+      minmax(0, 1fr);
+  }
+
+  .featured-cover {
+    width: 175px;
+    height: 245px;
+  }
+
+  .today-thumbs {
+    width: 100%;
+  }
+
+  .today-thumb {
+    width: 100%;
+  }
+
+  .book-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .book-section {
+    padding: 42px 0;
+  }
+
+  .today-section {
+    padding-top: 46px;
+    padding-bottom: 44px;
+  }
+
+  .today-featured {
+    grid-template-columns:
+      130px
+      minmax(0, 1fr);
+  }
+
+  .featured-cover {
+    width: 130px;
+    height: 182px;
+  }
+
+  .today-thumb {
+    height: 160px;
+  }
+
+  .book-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .book-cover {
+    height: 220px;
+  }
+
+  .book-cover img {
+    max-height: 220px;
+  }
+
+}
+
+
+/* ============================================
+   v10 - 도서 섹션 실물 비율 보정
+============================================ */
+
+/* 섹션 제목과 책 사이를 더 촘촘하게 */
+.book-section {
+  padding: 48px 0;
+}
+
+.book-section + .book-section {
+  padding-top: 48px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.more-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+
+
+/* ============================================
+   일반 도서 카드
+============================================ */
+
+.book-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.book-cover {
+  height: 258px;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  background: transparent;
+  overflow: visible;
+}
+
+/*
+  중요:
+  Kakao API 썸네일은 원본 픽셀 크기가 작음.
+  width:auto / height:auto로 두면 실제 사이트보다
+  훨씬 작게 렌더링됨.
+
+  따라서 화면 표시 높이를 명시적으로 확대.
+*/
+.book-cover img {
+  width: auto;
+  height: 250px;
+
+  max-width: 100%;
+  max-height: 250px;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, .08);
+}
+
+.book-title {
+  min-height: 40px;
+
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* ============================================
+   캐러셀 화살표
+============================================ */
+
+.book-row-wrap {
+  position: relative;
+  display: block;
+}
+
+.book-row-wrap > .circle-arrow {
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  top: 126px;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #777;
+  font-size: 28px;
+  line-height: 1;
+
+  z-index: 5;
+}
+
+.book-row-wrap > .row-prev {
+  left: -64px;
+}
+
+.book-row-wrap > .row-next {
+  right: -64px;
+}
+
+
+/* ============================================
+   트렌드 / 북퍼포먼스 등 일반 섹션
+============================================ */
+
+/*
+  실제 교보문고는 제목 바로 아래에서
+  책 표지가 시작한다.
+  기존에는 작은 API 이미지가 250px 높이 영역 하단에
+  위치하면서 위쪽이 빈 공간처럼 보였다.
+*/
+.book-section .book-grid {
+  align-items: start;
+}
+
+.book-section .book-card {
+  align-self: start;
+}
+
+
+/* 더보기 위치/가독성 */
+.section-heading .more-link {
+  padding: 2px 0 3px;
+}
+
+
+/* ============================================
+   오늘의 선택도 약간 더 크게
+============================================ */
+
+.today-section {
+  padding-top: 54px;
+  padding-bottom: 52px;
+}
+
+.today-section .section-heading {
+  margin-bottom: 22px;
+}
+
+.featured-cover {
+  width: 205px;
+  height: 287px;
+}
+
+.featured-cover img {
+  width: auto;
+  height: 287px;
+  max-width: 205px;
+  object-fit: contain;
+}
+
+.today-thumb {
+  width: 148px;
+  height: 214px;
+}
+
+.today-thumb img {
+  width: auto;
+  height: 214px;
+  max-width: 148px;
+  object-fit: contain;
+}
+
+
+/* ============================================
+   화면 폭 대응
+============================================ */
+
+@media screen and (max-width: 1320px) {
+
+  .book-row-wrap > .row-prev {
+    left: -44px;
+  }
+
+  .book-row-wrap > .row-next {
+    right: -44px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .book-row-wrap > .circle-arrow {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .book-cover {
+    height: 220px;
+  }
+
+  .book-cover img {
+    height: 215px;
+    max-height: 215px;
+  }
+
+}
+
+/* ============================================
+   v11 - CASTing / 이벤트 실이미지 적용
+============================================ */
+.casting-section { padding-top: 76px; padding-bottom: 76px; }
+.casting-section .section-heading,
+.event-section .section-heading { margin-bottom: 26px; }
+.casting-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
+.casting-card { min-width: 0; }
+.casting-card img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; }
+.casting-grid h3 { margin-top:13px; font-size:14px; line-height:1.5; font-weight:700; color:#222; }
+
+.event-section { padding-top: 72px; padding-bottom: 96px; }
+.event-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.event-card { display:block; min-height:0; padding:0; border-radius:14px; overflow:hidden; background:none; }
+.event-card img { display:block; width:100%; height:auto; aspect-ratio:670/300; object-fit:cover; transition:transform .25s ease; }
+.event-card:hover img { transform:scale(1.015); }
+
+@media (max-width:1024px){
+ .casting-grid{grid-template-columns:repeat(3,1fr)}
+ .event-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+ .casting-grid{grid-template-columns:repeat(2,1fr)}
+ .event-grid{grid-template-columns:1fr}
+}
+
+
+/* ============================================
+   v12 - 하단 섹션 비율 / 실제 교보문고 흐름 보정
+============================================ */
+
+/* POD / 교보Only */
+.pod-section,
+.only-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.only-section + .casting-section {
+  padding-top: 64px;
+}
+
+
+/* CASTing : 실제 화면보다 과하게 넓어 보이지 않도록 */
+.casting-section {
+  padding-top: 64px;
+  padding-bottom: 62px;
+}
+
+.casting-section .section-heading {
+  margin-bottom: 22px;
+}
+
+.casting-grid {
+  gap: 22px;
+}
+
+.casting-card img {
+  border-radius: 12px;
+}
+
+.casting-grid h3 {
+  margin-top: 11px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* 이벤트 */
+.event-section {
+  padding-top: 58px;
+  padding-bottom: 82px;
+}
+
+.event-section .section-heading {
+  margin-bottom: 22px;
+}
+
+.event-grid {
+  gap: 22px 24px;
+}
+
+.event-card {
+  border-radius: 12px;
+}
+
+
+/* ============================================
+   v12 - 하단 푸터 정밀 보정
+============================================ */
+
+.footer-safety {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+
+  color: #777;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.footer-safety strong {
+  color: #555;
+  font-size: 11px;
+}
+
+.certification-item.isms {
+  align-items: flex-start;
+}
+
+.certification-item.isms span {
+  min-width: 210px;
+}
+
+.certification-item.isms small {
+  font-size: 9px;
+  color: #888;
+}
+
+.company-info a {
+  color: #555;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .footer-safety {
+    align-items: flex-start;
+  }
+}
+
+
+/* ============================================
+   v13 - AI 추천 Picks 전용 레이아웃
+============================================ */
+
+/*
+  일반 .book-grid를 재사용하지 않고,
+  실제 교보문고처럼
+  "왼쪽 설명 + 오른쪽 도서 4권" 구조로 분리합니다.
+*/
+
+.ai-picks {
+  padding-top: 74px;
+  padding-bottom: 78px;
+  background: #fff;
+}
+
+.ai-picks-grid {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  column-gap: 72px;
+  align-items: start;
+}
+
+.ai-picks-copy {
+  padding-top: 5px;
+}
+
+.ai-picks-copy > span {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #4dac2e;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.ai-picks-copy h2 {
+  margin: 0 0 20px;
+
+  color: #111;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.ai-picks-copy p {
+  margin: 0 0 22px;
+
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: -0.25px;
+}
+
+.ai-picks-copy .more-link {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ai-book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+.ai-book-grid .book-card {
+  min-width: 0;
+}
+
+.ai-book-grid .book-cover {
+  height: 245px;
+  margin-bottom: 12px;
+}
+
+.ai-book-grid .book-cover img {
+  height: 238px;
+  max-height: 238px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.ai-book-grid .book-title {
+  min-height: 40px;
+
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 600;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ai-book-grid .book-meta {
+  margin-top: 5px;
+
+  color: #999;
+  font-size: 10px;
+  line-height: 1.35;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ai-book-grid .book-price {
+  margin-top: 7px;
+
+  color: #111;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* ============================================
+   v13 - BEST 안정화
+============================================ */
+
+.best-section {
+  padding-top: 70px;
+  padding-bottom: 76px;
+}
+
+.best-layout {
+  grid-template-columns: 165px minmax(0, 1fr);
+  gap: 42px;
+}
+
+.best-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 38px 24px;
+  align-items: start;
+}
+
+.best-grid .book-cover {
+  height: 248px;
+}
+
+.best-grid .book-cover img {
+  height: 240px;
+  max-height: 240px;
+}
+
+.best-grid .book-title {
+  min-height: 42px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* 큐레이션 결과가 적더라도 로딩 메시지가 레이아웃을 깨지 않도록 */
+.ai-book-grid > .book-empty,
+.best-grid > .book-empty {
+  grid-column: 1 / -1;
+}
+
+
+/* ============================================
+   v13 반응형
+============================================ */
+
+@media screen and (max-width: 1024px) {
+
+  .ai-picks-grid {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .ai-book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .ai-picks-grid {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .ai-book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ============================================
+   v14 - 교보문고 Only 5권 고정
+============================================ */
+
+.only-section .book-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.only-section .book-cover {
+  height: 270px;
+}
+
+.only-section .book-cover img {
+  height: 262px;
+  max-height: 262px;
+}
+
+@media screen and (max-width: 1024px) {
+  .only-section .book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .only-section .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* ============================================
+   v16 - 큐레이션 검색 실패 카드도 유지
+============================================ */
+
+.only-section .book-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.only-section .book-card {
+  min-width: 0;
+}
+
+/* 이미지 경로가 아직 없더라도 표지 영역 자체는 유지 */
+.only-section .book-cover:empty {
+  width: 100%;
+  max-width: 174px;
+  height: 262px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid #e5e5e5;
+  background:
+    linear-gradient(
+      135deg,
+      #fafafa,
+      #f2f2f2
+    );
+
+  position: relative;
+}
+
+.only-section .book-cover:empty::after {
+  content: "표지 이미지 준비중";
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #aaa;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/* 수동 표지가 없을 때도 5개가 균등 배치 */
+.only-section .book-grid {
+  align-items: start;
+}
+
+
+
+/* ==========================================================
+   V28 - 오늘의 선택 레이아웃 회귀 수정
+========================================================== */
+
+/*
+  V27에서 대표 도서를 클릭 가능하게 만들며
+  .today-featured 안에 <a> 래퍼가 하나 추가됐다.
+
+  기존 .today-featured 자체가 2열 grid였기 때문에
+  링크가 첫 번째 205px 칸에만 배치되고 내부 콘텐츠가 넘치면서
+  실제 교보문고보다 큰 빈 여백이 생겼다.
+
+  부모는 단순 컨테이너로 돌리고,
+  링크 자체가 정확한 2열 레이아웃을 담당하도록 수정한다.
+*/
+
+.today-featured {
+  display: block;
+  min-width: 0;
+}
+
+.today-featured .today-featured-link {
+  display: grid;
+  grid-template-columns:
+    205px
+    minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  width: 100%;
+}
+
+.today-layout {
+  grid-template-columns:
+    minmax(0, 1fr)
+    470px;
+  gap: 34px;
+}
+
+/* 실제 메인과 비슷하게 제목과 본문 사이 과도한 공백 방지 */
+.today-featured .featured-info h3 {
+  margin-bottom: 18px;
+}
+
+.today-featured .featured-info strong {
+  margin-bottom: 8px;
+}
+
+.today-section {
+  padding-top: 50px;
+  padding-bottom: 48px;
+}
+
+.today-section .section-heading {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .today-featured .today-featured-link {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+
+/* ==========================================================
+   V29 - 오늘의 선택 설명을 실제 메인처럼 간결하게
+========================================================== */
+
+.today-featured .featured-description {
+  max-width: 430px;
+  margin-top: 12px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+.today-featured .featured-info h3 {
+  margin-bottom: 12px;
+}
+
+.today-featured .featured-info strong {
+  display: block;
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   V30 - 오늘의 선택 인터랙션 / 긴 설명
+========================================================== */
+
+.today-featured .featured-description {
+  max-width: 470px;
+  min-height: 118px;
+  margin-top: 14px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.85;
+  word-break: keep-all;
+}
+
+.today-section .tabs button {
+  cursor: pointer;
+  transition:
+    color .15s ease,
+    font-weight .15s ease;
+}
+
+.today-section .tabs button.active {
+  color: #2f58b5;
+  font-weight: 800;
+}
+
+.today-section .circle-arrow {
+  transition:
+    background .15s ease,
+    border-color .15s ease,
+    transform .15s ease;
+}
+
+.today-section .circle-arrow:hover {
+  background: #f6f6f6;
+  border-color: #aaa;
+  transform: translateY(-1px);
+}
+
+.today-thumb {
+  transition:
+    transform .18s ease;
+}
+
+.today-thumb:hover {
+  transform: translateY(-4px);
+}
+
+.today-thumb:hover img {
+  box-shadow: 0 7px 18px rgba(0,0,0,.12);
+}
+
+@media screen and (max-width: 900px) {
+  .today-featured .featured-description {
+    min-height: 0;
+    max-width: none;
+  }
+}
+
+
+/* ==========================================================
+   V31 - MD 추천 인터랙션
+========================================================== */
+
+#mdTabs button {
+  cursor: pointer;
+  transition:
+    color .15s ease,
+    font-weight .15s ease;
+}
+
+#mdTabs button.active {
+  color: #2f58b5;
+  font-weight: 800;
+}
+
+#mdPrev,
+#mdNext {
+  transition:
+    background .15s ease,
+    border-color .15s ease,
+    transform .15s ease;
+}
+
+#mdPrev:hover,
+#mdNext:hover {
+  background: #f6f6f6;
+  border-color: #aaa;
+  transform: translateY(-1px);
+}
+
+#mdBooks {
+  transition: opacity .15s ease;
+}
+
+#mdBooks.is-loading {
+  opacity: .45;
+}
+
+#mdBooks .book-card {
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+#mdBooks .book-card:hover {
+  transform: translateY(-4px);
+}
+
+#mdBooks .book-card:hover .book-cover img {
+  box-shadow: 0 8px 20px rgba(0,0,0,.13);
+}
+

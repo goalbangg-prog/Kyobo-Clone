@@ -1,0 +1,2206 @@
+@charset "utf-8";
+
+:root {
+  --sub-green: #4dac27;
+  --sub-blue: #474cbb;
+  --sub-dark: #111;
+  --sub-muted: #767676;
+  --sub-line: #e5e5e5;
+  --sub-soft: #f7f7f7;
+}
+
+body {
+  color: #111;
+  background: #fff;
+}
+
+/* -----------------------------
+   Top / Header
+----------------------------- */
+
+.sub-service-bar {
+  height: 34px;
+  border-bottom: 1px solid #eee;
+  font-size: 11px;
+}
+
+.sub-service-inner,
+.sub-header-main,
+.sub-gnb-inner {
+  display: flex;
+  align-items: center;
+}
+
+.sub-service-inner {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.sub-service-tabs {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.sub-service-tabs > * {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 18px;
+}
+
+.sub-service-tabs b:nth-child(1) {
+  background: #4c55c5;
+  color: #fff;
+}
+
+.sub-service-tabs b:nth-child(2) {
+  background: #346bd4;
+  color: #fff;
+}
+
+.sub-service-tabs b:nth-child(3) {
+  background: #1ab4aa;
+  color: #fff;
+}
+
+.sub-service-tabs b:nth-child(4) {
+  background: #f05c4a;
+  color: #fff;
+}
+
+.sub-service-links {
+  display: flex;
+  gap: 14px;
+  color: #777;
+}
+
+.sub-header-main {
+  height: 92px;
+  gap: 44px;
+}
+
+.sub-logo img {
+  width: 180px;
+}
+
+.sub-search {
+  width: 560px;
+  height: 48px;
+  border: 1px solid #bbb;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #fff;
+}
+
+.sub-search select {
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  outline: 0;
+}
+
+.sub-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 0 18px;
+}
+
+.sub-search button {
+  border: 0;
+  background: transparent;
+  font-size: 23px;
+}
+
+.sub-head-icons {
+  margin-left: auto;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.sub-head-icons button {
+  font-size: 20px;
+}
+
+.sub-user {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  background: #4bc52b;
+}
+
+.sub-gnb {
+  border-bottom: 1px solid #eee;
+}
+
+.sub-gnb-inner {
+  height: 58px;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.sub-gnb-inner i {
+  flex: 1;
+}
+
+.sub-gnb-inner b {
+  color: #1e8d20;
+}
+
+.sub-menu {
+  font-size: 24px;
+}
+
+/* -----------------------------
+   Product top
+----------------------------- */
+
+.sub-main {
+  padding: 24px 0 150px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+  font-size: 12px;
+  color: #777;
+}
+
+.breadcrumb span {
+  color: #aaa;
+}
+
+.product-title-block {
+  position: relative;
+  text-align: center;
+}
+
+.product-title-block h1 {
+  font-size: 30px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.product-title-block > p {
+  margin-top: 12px;
+  color: #777;
+  font-size: 14px;
+}
+
+.share-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.format-tabs {
+  width: 380px;
+  margin: 28px auto 32px;
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.format-tabs button {
+  flex: 1;
+  min-height: 61px;
+  padding: 10px;
+  color: #777;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.format-tabs button span,
+.format-tabs button b {
+  display: block;
+}
+
+.format-tabs button b {
+  margin-top: 3px;
+}
+
+.format-tabs .active {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  color: #454aa5;
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+
+.product-overview {
+  display: grid;
+  grid-template-columns: 330px 390px 330px;
+  justify-content: space-between;
+  align-items: start;
+  min-height: 430px;
+}
+
+.product-meta {
+  padding-top: 15px;
+  font-size: 13px;
+}
+
+.meta-author p {
+  margin-bottom: 7px;
+}
+
+.rank {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 24px 0;
+  color: #555;
+}
+
+.rank-icon {
+  color: var(--sub-green);
+}
+
+.rating-box {
+  width: 100%;
+  min-height: 56px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+}
+
+.clovers,
+.review-clovers {
+  color: #45b62a;
+}
+
+.rating-box strong {
+  font-size: 20px;
+}
+
+.rating-box small {
+  color: #777;
+}
+
+.notice-row {
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-row button {
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.recommend-banner {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 8px;
+  background: #dbeafe;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  text-align: left;
+}
+
+.product-cover-area {
+  text-align: center;
+}
+
+.product-cover-frame {
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-cover-frame img {
+  max-width: 300px;
+  max-height: 410px;
+  box-shadow: 0 9px 22px rgba(0,0,0,.14);
+}
+
+.cover-tools,
+.preview-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cover-tools button,
+.preview-links button {
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 8px 14px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.product-purchase {
+  padding-top: 15px;
+}
+
+.md-badge {
+  display: inline-block;
+  padding: 4px;
+  font-size: 11px;
+  color: #5056b5;
+  background: #f1f1ff;
+}
+
+.price-line {
+  margin: 20px 0 24px;
+}
+
+.price-line em {
+  color: #159400;
+  font-weight: 800;
+}
+
+.price-line strong {
+  margin: 0 5px;
+  font-size: 24px;
+}
+
+.price-line del {
+  color: #999;
+}
+
+.purchase-info-list > div {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+}
+
+.purchase-info-list dt {
+  font-weight: 700;
+}
+
+.purchase-info-list dd {
+  text-align: right;
+}
+
+.purchase-info-list dd b {
+  font-size: 16px;
+}
+
+.purchase-info-list small {
+  display: block;
+  margin-top: 7px;
+  color: #777;
+}
+
+.overview-bottom-tools {
+  display: grid;
+  grid-template-columns: 1fr 390px 1fr;
+  margin-top: 8px;
+}
+
+/* -----------------------------
+   Related / Event
+----------------------------- */
+
+.related-strip,
+.event-strip {
+  margin-top: 72px;
+  padding-top: 42px;
+  border-top: 1px solid #eee;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-head h2,
+.content-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: 6px;
+}
+
+.carousel-arrows button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.related-books {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+}
+
+.related-book-card {
+  min-width: 0;
+}
+
+.related-cover {
+  height: 190px;
+  display: grid;
+  place-items: end center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f7f7f7;
+}
+
+.related-cover img {
+  max-width: 100%;
+  max-height: 185px;
+}
+
+.related-cover span {
+  margin-bottom: 70px;
+  color: #999;
+}
+
+.related-book-card strong,
+.related-book-card > span,
+.related-book-card > b {
+  display: block;
+}
+
+.related-book-card strong {
+  margin-top: 12px;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.related-book-card > span {
+  margin-top: 6px;
+  color: #777;
+  font-size: 12px;
+}
+
+.related-book-card > b {
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+.event-cards {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.event-cards article {
+  min-height: 138px;
+  padding: 24px;
+  border-radius: 14px;
+  background: #f6f7fb;
+}
+
+.event-cards strong,
+.event-cards p {
+  display: block;
+}
+
+.event-cards strong {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.event-cards p {
+  margin-top: 10px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.event-chip {
+  display: inline-block;
+  color: #4a50b7;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.more-btn {
+  color: #666;
+  font-size: 12px;
+}
+
+/* -----------------------------
+   Detail tabs
+----------------------------- */
+
+.detail-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  margin-top: 72px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.detail-tabs-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.detail-tabs a {
+  padding: 20px;
+  font-weight: 700;
+}
+
+/* -----------------------------
+   Detail body
+----------------------------- */
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 790px) 260px;
+  gap: 70px;
+  margin-top: 55px;
+}
+
+.content-section {
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid #eee;
+}
+
+.content-section h2 {
+  margin-bottom: 25px;
+}
+
+.section-lead {
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 700;
+}
+
+.body-copy {
+  white-space: pre-line;
+  font-size: 14px;
+  line-height: 2;
+  color: #333;
+}
+
+.product-info-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-info-cards article {
+  min-height: 102px;
+  padding: 20px;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-info-cards article:last-child {
+  border-right: 0;
+}
+
+.product-info-cards span {
+  color: #777;
+  font-size: 12px;
+}
+
+.product-info-cards b {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.cloud-only-detail img,
+.cloud-only-review img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 34px auto 0;
+  border-radius: 8px;
+}
+
+.highlight-card {
+  padding: 28px;
+  border-radius: 12px;
+  background: #f7f7f7;
+}
+
+.highlight-card span {
+  display: inline-block;
+  color: #4a50b7;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.highlight-card blockquote {
+  margin-top: 14px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.author-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  padding: 26px;
+  border-radius: 12px;
+  background: #f7f7f7;
+}
+
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #555;
+  background: #e7e7e7;
+  font-size: 12px;
+}
+
+.author-copy span {
+  margin-left: 5px;
+  color: #777;
+}
+
+.author-copy p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.author-tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 15px;
+}
+
+.author-tags span {
+  padding: 6px 9px;
+  border-radius: 16px;
+  background: #fff;
+  color: #666;
+  font-size: 11px;
+}
+
+.text-box {
+  white-space: pre-line;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.basic-info-table {
+  border-top: 1px solid #ddd;
+}
+
+.basic-info-table > div {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  padding: 17px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.basic-info-table dt {
+  font-weight: 700;
+}
+
+.basic-info-table dd {
+  color: #555;
+}
+
+.review-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-title-row strong {
+  font-size: 14px;
+}
+
+.review-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 34px;
+  padding: 32px;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+}
+
+.review-score-box {
+  text-align: center;
+}
+
+.review-score-box .review-clovers {
+  display: block;
+  font-size: 22px;
+}
+
+.review-score-box b {
+  display: block;
+  margin-top: 12px;
+  font-size: 30px;
+}
+
+.review-score-box p {
+  margin-top: 8px;
+  color: #777;
+  font-size: 12px;
+}
+
+.review-bars > div {
+  display: grid;
+  grid-template-columns: 72px 1fr 40px;
+  gap: 10px;
+  align-items: center;
+  margin: 13px 0;
+  font-size: 12px;
+}
+
+.review-bars i {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #eee;
+}
+
+.review-bars i b {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: #4dac27;
+}
+
+.review-bars em {
+  font-style: normal;
+  text-align: right;
+}
+
+.review-write {
+  margin-top: 22px;
+  padding: 22px 24px;
+  border-radius: 12px;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-write p {
+  margin-top: 5px;
+  color: #777;
+  font-size: 12px;
+}
+
+.review-write button {
+  padding: 10px 18px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.review-list {
+  margin-top: 26px;
+}
+
+.review-list article {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.review-user {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.review-user span {
+  color: #45b62a;
+  font-size: 12px;
+}
+
+.review-list article p {
+  margin-top: 14px;
+  line-height: 1.7;
+  color: #444;
+  font-size: 13px;
+}
+
+.review-list article small {
+  display: block;
+  margin-top: 12px;
+  color: #999;
+}
+
+/* -----------------------------
+   Side
+----------------------------- */
+
+.detail-side {
+  border-left: 1px solid #eee;
+  padding-left: 25px;
+}
+
+.side-sticky {
+  position: sticky;
+  top: 90px;
+}
+
+.detail-side h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.detail-side ol li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+  padding: 13px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.detail-side ol li span {
+  color: #4a50b7;
+  font-weight: 700;
+}
+
+.side-divider {
+  height: 1px;
+  margin: 34px 0;
+  background: #eee;
+}
+
+.side-mini-book {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.mini-placeholder {
+  height: 98px;
+  display: grid;
+  place-items: center;
+  background: #f5f5f5;
+  color: #aaa;
+  font-size: 11px;
+}
+
+/* -----------------------------
+   Bottom purchase dock
+----------------------------- */
+
+.purchase-dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  border-top: 1px solid #ddd;
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 -5px 20px rgba(0,0,0,.05);
+}
+
+.purchase-dock-inner {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dock-total {
+  font-size: 13px;
+}
+
+.dock-total strong {
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.dock-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dock-actions > button {
+  height: 46px;
+  padding: 0 22px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 700;
+}
+
+.dock-actions .outline {
+  color: #565bd0;
+  border-color: #565bd0;
+}
+
+.dock-actions .primary {
+  color: #fff;
+  border-color: #5559c9;
+  background: #5559c9;
+}
+
+.qty {
+  height: 38px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.qty button {
+  width: 30px;
+}
+
+.qty span {
+  width: 28px;
+  text-align: center;
+}
+
+/* -----------------------------
+   Responsive
+----------------------------- */
+
+@media (max-width: 1000px) {
+  .product-overview,
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-overview {
+    gap: 35px;
+  }
+
+  .product-cover-area {
+    order: -1;
+  }
+
+  .detail-side {
+    display: none;
+  }
+
+  .related-books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .event-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .product-info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .sub-service-bar,
+  .sub-gnb {
+    display: none;
+  }
+
+  .sub-header-main {
+    padding: 0 20px;
+  }
+
+  .sub-search {
+    width: auto;
+    flex: 1;
+  }
+
+  .sub-logo img {
+    width: 140px;
+  }
+
+  .sub-head-icons {
+    display: none;
+  }
+
+  .format-tabs {
+    width: min(380px, 100%);
+  }
+
+  .product-title-block h1 {
+    font-size: 24px;
+  }
+
+  .related-books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-tabs a {
+    padding: 15px 5px;
+    font-size: 13px;
+  }
+
+  .product-info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .author-card {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-dock-inner {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .dock-total {
+    display: none;
+  }
+
+  .dock-actions {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+
+/* ==========================================================
+   V24 VISUAL MATCH PASS
+   - 1200px 실제 상품페이지 비율 강화
+   - 상단 표지/구매 정보 확대
+   - 상세 섹션의 호흡과 우측 영역 정리
+========================================================== */
+
+.sub-main > .container,
+.detail-tabs .container,
+.purchase-dock .container,
+.sub-header .container,
+.sub-service-bar .container {
+  width: 1200px;
+  max-width: calc(100% - 40px);
+}
+
+/* 실제 상품 페이지처럼 상단이 충분히 넓고 깊게 보이도록 */
+.breadcrumb {
+  margin-top: 6px;
+  margin-bottom: 56px;
+}
+
+.product-title-block h1 {
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+
+.product-title-block > p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.format-tabs {
+  width: 405px;
+  margin-top: 30px;
+  margin-bottom: 42px;
+}
+
+.format-tabs button {
+  min-height: 66px;
+}
+
+.product-overview {
+  grid-template-columns: 335px 420px 345px;
+  column-gap: 46px;
+  min-height: 530px;
+}
+
+.product-meta,
+.product-purchase {
+  padding-top: 28px;
+}
+
+.product-cover-frame {
+  height: 500px;
+  align-items: flex-start;
+}
+
+.product-cover-frame img {
+  max-width: 335px;
+  max-height: 470px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.cover-tools {
+  margin-top: 10px;
+}
+
+.meta-author {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.rank {
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+
+.rating-box {
+  min-height: 64px;
+}
+
+.notice-row {
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+.recommend-banner {
+  min-height: 48px;
+  align-items: center;
+}
+
+.price-line {
+  margin-top: 22px;
+  margin-bottom: 28px;
+}
+
+.price-line strong {
+  font-size: 27px;
+}
+
+.purchase-info-list > div {
+  min-height: 72px;
+  align-items: start;
+  padding: 21px 0;
+}
+
+.purchase-info-list dd {
+  line-height: 1.55;
+}
+
+/* 크게보기/미리보기는 표지 바로 아래 한 번만 강조 */
+.overview-bottom-tools {
+  margin-top: -20px;
+}
+
+.overview-bottom-tools .preview-links {
+  visibility: hidden;
+}
+
+/* 연관도서 영역 */
+.related-strip,
+.event-strip {
+  margin-top: 82px;
+  padding-top: 46px;
+}
+
+.related-strip .section-head h2,
+.event-strip .section-head h2 {
+  font-size: 24px;
+}
+
+.related-books {
+  gap: 30px;
+  margin-top: 28px;
+}
+
+.related-cover {
+  height: 225px;
+  background: #f5f5f5;
+}
+
+.related-cover img {
+  max-height: 218px;
+}
+
+.related-book-card strong {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.fallback-book-mark {
+  display: grid !important;
+  width: 116px;
+  height: 168px;
+  place-items: center;
+  margin: 0 !important;
+  color: #999 !important;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 11px;
+}
+
+/* 이벤트는 교보문고의 낮고 넓은 카드 느낌 */
+.event-cards {
+  gap: 20px;
+}
+
+.event-cards article {
+  min-height: 158px;
+  padding: 28px;
+}
+
+/* 상세 탭 */
+.detail-tabs {
+  margin-top: 88px;
+}
+
+.detail-tabs a {
+  padding: 23px 20px;
+  font-size: 15px;
+}
+
+/* 실제 상세페이지는 본문 폭이 넓고 섹션 사이의 공백이 큼 */
+.detail-layout {
+  grid-template-columns: minmax(0, 835px) 285px;
+  gap: 60px;
+  margin-top: 66px;
+}
+
+.content-section {
+  padding-bottom: 82px;
+  margin-bottom: 82px;
+}
+
+.content-section h2 {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.section-lead {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.body-copy {
+  font-size: 14px;
+  line-height: 2.05;
+}
+
+.product-info-cards article {
+  min-height: 116px;
+  padding: 24px 22px;
+}
+
+.highlight-card {
+  padding: 32px 34px;
+}
+
+.author-card {
+  padding: 32px;
+}
+
+.text-box {
+  line-height: 2.15;
+}
+
+.basic-info-table > div {
+  grid-template-columns: 165px 1fr;
+  padding: 20px 0;
+}
+
+.review-dashboard {
+  padding: 38px 40px;
+}
+
+.review-write {
+  margin-top: 26px;
+  padding: 26px 28px;
+}
+
+.review-list article {
+  padding: 30px 0;
+}
+
+/*
+  full-page 캡처에서 position: sticky 요소가 여러 번 찍히는 현상을 막는다.
+  실제 페이지 시각 비교용으로 우측 사이드는 한 번만 자연스럽게 보이게 한다.
+*/
+.side-sticky {
+  position: static;
+}
+
+.detail-side {
+  padding-left: 30px;
+}
+
+.detail-side h3 {
+  font-size: 19px;
+}
+
+.detail-side ol li {
+  padding: 15px 0;
+}
+
+/* 구매바 */
+.purchase-dock-inner {
+  height: 82px;
+}
+
+.dock-total strong {
+  font-size: 24px;
+}
+
+.dock-actions > button {
+  min-width: 92px;
+  height: 48px;
+  padding: 0 20px;
+}
+
+.dock-actions .primary {
+  min-width: 105px;
+}
+
+/* 너무 넓은 모니터에서도 상품 본문은 실제 1200px 중심 */
+@media (min-width: 1600px) {
+  .sub-main > .container,
+  .detail-tabs .container,
+  .purchase-dock .container,
+  .sub-header .container,
+  .sub-service-bar .container {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .product-overview {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .product-cover-area {
+    order: -1;
+  }
+
+  .product-meta,
+  .product-purchase {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================
+   V25 - Actual-detail-page proportion pass
+========================================================== */
+
+/* 헤더를 실제 교보문고처럼 조금 더 여유 있게 */
+.sub-header-main {
+  height: 104px;
+}
+
+.sub-logo img {
+  width: 196px;
+}
+
+.sub-search {
+  width: 590px;
+  height: 50px;
+  border-radius: 26px;
+}
+
+.sub-gnb-inner {
+  height: 62px;
+}
+
+/* 상품 타이틀 */
+.breadcrumb {
+  margin-bottom: 62px;
+}
+
+.product-title-block h1 {
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.product-title-block > p {
+  margin-top: 14px;
+  font-size: 15px;
+}
+
+.format-tabs {
+  width: 420px;
+  margin-top: 34px;
+  margin-bottom: 48px;
+}
+
+.format-tabs button {
+  min-height: 70px;
+}
+
+/* 실제 상품 상세 상단의 3열 비율을 강화 */
+.product-overview {
+  grid-template-columns: 340px 420px 350px;
+  column-gap: 45px;
+  min-height: 570px;
+}
+
+.product-meta,
+.product-purchase {
+  padding-top: 34px;
+}
+
+/* Kakao 썸네일 원본이 작아도 상세페이지 표지는 크게 보이도록 강제 */
+.product-cover-frame {
+  height: 515px;
+  align-items: flex-start;
+}
+
+.product-cover-frame img {
+  width: 300px;
+  max-width: 300px;
+  max-height: 480px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.cover-tools {
+  margin-top: 16px;
+}
+
+.cover-tools button {
+  padding: 9px 15px;
+}
+
+/* 좌측 메타 */
+.meta-author {
+  font-size: 14px;
+}
+
+.rank {
+  margin-top: 30px;
+  margin-bottom: 26px;
+}
+
+.rating-box {
+  min-height: 68px;
+}
+
+.rating-box strong {
+  font-size: 21px;
+}
+
+.notice-row {
+  margin-top: 22px;
+}
+
+.recommend-banner {
+  min-height: 52px;
+}
+
+/* 우측 구매정보 */
+.md-badge {
+  padding: 5px 6px;
+}
+
+.price-line {
+  margin: 22px 0 30px;
+}
+
+.price-line strong {
+  font-size: 29px;
+}
+
+.purchase-info-list > div {
+  grid-template-columns: 112px 1fr;
+  min-height: 78px;
+  padding: 23px 0;
+}
+
+.purchase-info-list dt,
+.purchase-info-list dd {
+  font-size: 13px;
+}
+
+/* 상품 상단과 연관도서 사이 실제 사이트처럼 넉넉한 간격 */
+.related-strip {
+  margin-top: 96px;
+}
+
+.event-strip {
+  margin-top: 70px;
+}
+
+.related-books {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.related-cover {
+  height: 245px;
+  align-items: end;
+  padding: 0 8px 6px;
+}
+
+.related-cover img {
+  width: auto;
+  max-width: 150px;
+  max-height: 232px;
+  object-fit: contain;
+}
+
+.related-book-card strong {
+  min-height: 43px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* 이벤트 */
+.event-cards article {
+  min-height: 166px;
+}
+
+/* 상세 영역: 너무 길게 늘어지지 않게 실제 페이지 흐름에 맞춤 */
+.detail-tabs {
+  margin-top: 92px;
+}
+
+.detail-layout {
+  grid-template-columns: 825px 285px;
+  gap: 70px;
+  margin-top: 64px;
+}
+
+.content-section {
+  margin-bottom: 68px;
+  padding-bottom: 68px;
+}
+
+.content-section h2 {
+  margin-bottom: 28px;
+  font-size: 24px;
+}
+
+.section-lead {
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.body-copy {
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.product-info-cards article {
+  min-height: 108px;
+}
+
+.highlight-card {
+  padding: 30px 32px;
+}
+
+.author-card {
+  padding: 30px;
+}
+
+.basic-info-table > div {
+  min-height: 56px;
+  align-items: center;
+}
+
+.review-dashboard {
+  padding: 34px 36px;
+}
+
+/* 우측 사이드의 시각적 무게를 낮춰 본문을 방해하지 않게 */
+.detail-side {
+  padding-left: 26px;
+}
+
+.detail-side h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+.detail-side ol li {
+  padding: 13px 0;
+}
+
+/* 하단 구매바 */
+.purchase-dock-inner {
+  height: 80px;
+}
+
+.dock-actions > button {
+  height: 46px;
+}
+
+/* 21:9 / 80% 줌 환경에서도 레이아웃이 실제 사이트처럼 중앙에 남도록 */
+@media (min-width: 1500px) {
+  .sub-main > .container,
+  .detail-tabs .container,
+  .purchase-dock .container,
+  .sub-header .container,
+  .sub-service-bar .container {
+    width: 1200px;
+  }
+}
+
+
+/* ==========================================================
+   V26 - 상단 상품영역 1:1 정합 집중 보정
+   기준: 실제 교보문고 상세페이지 캡처
+========================================================== */
+
+/* 상단 헤더 밀도 */
+.sub-service-bar {
+  height: 30px;
+}
+
+.sub-header-main {
+  height: 94px;
+}
+
+.sub-logo img {
+  width: 188px;
+}
+
+.sub-search {
+  width: 570px;
+  height: 48px;
+}
+
+.sub-gnb-inner {
+  height: 56px;
+  gap: 28px;
+}
+
+/* breadcrumb와 제목 영역 */
+.sub-main {
+  padding-top: 20px;
+}
+
+.breadcrumb {
+  margin-bottom: 54px;
+  font-size: 12px;
+}
+
+.product-title-block {
+  min-height: 160px;
+}
+
+.product-title-block h1 {
+  font-size: 31px;
+  line-height: 1.35;
+}
+
+.product-title-block > p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #707070;
+}
+
+.share-button {
+  width: 38px;
+  height: 38px;
+  right: 2px;
+}
+
+.format-tabs {
+  width: 390px;
+  margin-top: 28px;
+  margin-bottom: 34px;
+}
+
+.format-tabs button {
+  min-height: 62px;
+  font-size: 12px;
+}
+
+/* 실제 캡처처럼 3열 전체 폭을 조금 더 압축 */
+.product-overview {
+  grid-template-columns: 330px 395px 330px;
+  column-gap: 52px;
+  min-height: 500px;
+}
+
+.product-meta,
+.product-purchase {
+  padding-top: 26px;
+}
+
+/* 좌측 정보 */
+.meta-author {
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.rank {
+  margin: 25px 0 22px;
+  font-size: 12px;
+}
+
+.rating-box {
+  min-height: 58px;
+}
+
+.rating-box strong {
+  font-size: 19px;
+}
+
+.notice-row {
+  margin: 17px 0 15px;
+  font-size: 12px;
+}
+
+.recommend-banner {
+  min-height: 46px;
+  padding: 12px 14px;
+  font-size: 12px;
+}
+
+/* 중앙 표지: 실제 캡처처럼 지나치게 크지 않고 세로 중심 */
+.product-cover-frame {
+  height: 455px;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.product-cover-frame img {
+  width: 280px;
+  max-width: 280px;
+  max-height: 430px;
+  object-fit: contain;
+  box-shadow: 0 10px 22px rgba(0,0,0,.13);
+}
+
+.cover-tools {
+  margin-top: 8px;
+}
+
+.cover-tools button {
+  padding: 7px 13px;
+  font-size: 11px;
+}
+
+/* 우측 가격/포인트/배송 */
+.product-purchase {
+  padding-top: 30px;
+}
+
+.md-badge {
+  padding: 4px 5px;
+  font-size: 10px;
+}
+
+.price-line {
+  margin: 18px 0 22px;
+}
+
+.price-line em {
+  font-size: 14px;
+}
+
+.price-line strong {
+  font-size: 25px;
+}
+
+.price-line del {
+  font-size: 12px;
+}
+
+.purchase-info-list > div {
+  grid-template-columns: 100px 1fr;
+  min-height: 66px;
+  padding: 17px 0;
+}
+
+.purchase-info-list dt,
+.purchase-info-list dd {
+  font-size: 12px;
+}
+
+.purchase-info-list dd b {
+  font-size: 15px;
+}
+
+.purchase-info-list small {
+  font-size: 11px;
+}
+
+/* 실제 사이트처럼 표지 아래 도구와 다음 섹션 사이를 정돈 */
+.overview-bottom-tools {
+  display: none;
+}
+
+.related-strip {
+  margin-top: 62px;
+  padding-top: 34px;
+}
+
+.related-strip .section-head h2,
+.event-strip .section-head h2 {
+  font-size: 22px;
+}
+
+.related-books {
+  margin-top: 22px;
+  gap: 28px;
+}
+
+.related-cover {
+  height: 220px;
+}
+
+.related-cover img {
+  max-width: 140px;
+  max-height: 210px;
+}
+
+.related-book-card strong {
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.event-strip {
+  margin-top: 58px;
+  padding-top: 36px;
+}
+
+.event-cards article {
+  min-height: 145px;
+  padding: 24px;
+}
+
+/* 상세 탭과 본문 */
+.detail-tabs {
+  margin-top: 72px;
+}
+
+.detail-tabs a {
+  padding: 19px 20px;
+  font-size: 14px;
+}
+
+.detail-layout {
+  grid-template-columns: 820px 270px;
+  gap: 62px;
+  margin-top: 56px;
+}
+
+.content-section {
+  margin-bottom: 62px;
+  padding-bottom: 62px;
+}
+
+.content-section h2 {
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+
+.product-info-cards article {
+  min-height: 98px;
+  padding: 20px;
+}
+
+.section-lead {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.body-copy,
+.text-box {
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.author-card {
+  padding: 26px;
+}
+
+.highlight-card {
+  padding: 26px 28px;
+}
+
+.basic-info-table > div {
+  min-height: 52px;
+  padding: 16px 0;
+}
+
+/* 리뷰를 실제 사이트처럼 조금 더 조밀하게 */
+.review-dashboard {
+  padding: 30px 32px;
+}
+
+.review-score-box b {
+  font-size: 28px;
+}
+
+.review-write {
+  padding: 22px 24px;
+}
+
+/* 우측 베스트 */
+.detail-side {
+  padding-left: 24px;
+}
+
+.detail-side h3 {
+  font-size: 17px;
+}
+
+.detail-side ol li {
+  padding: 12px 0;
+  font-size: 12px;
+}
+
+/* 구매바 */
+.purchase-dock-inner {
+  height: 74px;
+}
+
+.dock-total strong {
+  font-size: 22px;
+}
+
+.dock-actions > button {
+  height: 44px;
+  min-width: 88px;
+  padding: 0 18px;
+}
+
+.qty {
+  height: 36px;
+}
+
+/* 초광폭 화면에서 실제 교보처럼 중앙에 조밀하게 */
+@media (min-width: 1700px) {
+  .sub-main > .container,
+  .detail-tabs .container,
+  .purchase-dock .container,
+  .sub-header .container,
+  .sub-service-bar .container {
+    width: 1180px;
+  }
+}
+
+
+/* ==========================================================
+   V27 - 상세페이지 기능 UI / 아이콘 / 고해상도 표지
+========================================================== */
+
+.sub-head-icons {
+  gap: 17px;
+}
+
+.sub-icon-button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.sub-icon-button img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.sub-user {
+  background: #4bc52b;
+}
+
+.sub-user img {
+  width: 23px;
+  height: 23px;
+  filter: invert(1);
+}
+
+.product-cover-frame img,
+.related-cover img,
+.book-modal-panel img {
+  image-rendering: auto;
+  backface-visibility: hidden;
+}
+
+.product-cover-frame img {
+  width: 280px;
+  max-width: 280px;
+  max-height: 440px;
+}
+
+/* 상세 탭 활성화 */
+.detail-tabs a {
+  position: relative;
+}
+
+.detail-tabs a.is-active {
+  color: #474cbb;
+}
+
+.detail-tabs a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: -1px;
+  height: 3px;
+  background: #474cbb;
+}
+
+/* 찜 */
+.wish.is-active {
+  color: #e74c5b;
+  border-color: #e8a0a7;
+  background: #fff4f5;
+}
+
+/* 표지 확대 모달 */
+.book-modal[hidden] {
+  display: none;
+}
+
+.book-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.book-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+}
+
+.book-modal-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(580px, calc(100% - 40px));
+  max-height: calc(100vh - 60px);
+  padding: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(0,0,0,.3);
+}
+
+.book-modal-panel img {
+  max-width: 420px;
+  max-height: calc(100vh - 180px);
+  object-fit: contain;
+}
+
+.book-modal-panel strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+.book-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f4f4f4;
+  font-size: 22px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* 토스트 */
+.sub-toast[hidden] {
+  display: none;
+}
+
+.sub-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 102px;
+  z-index: 120;
+  transform: translateX(-50%);
+  min-width: 270px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(25,25,25,.92);
+  text-align: center;
+  font-size: 13px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.18);
+}
+
+
+/* ==========================================================
+   V28 - 구매 총액 / 오류 복구 UX
+========================================================== */
+
+.dock-total strong {
+  min-width: 105px;
+  display: inline-block;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.qty button {
+  transition:
+    background .15s ease,
+    color .15s ease;
+}
+
+.qty button:hover {
+  background: #f3f3f3;
+}
+
+.product-title-block > p {
+  word-break: keep-all;
+}
+
+
+/* ==========================================================
+   V29 - 책 제목 아래 한 줄 설명 정리
+========================================================== */
+
+.product-title-block > p {
+  max-width: 720px;
+  min-height: 22px;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #767676;
+  font-size: 13px;
+  line-height: 1.65;
+  word-break: keep-all;
+}
